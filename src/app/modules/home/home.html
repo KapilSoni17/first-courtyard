@@ -1,0 +1,88 @@
+<!-- <div class="embla" emblaCarousel [options]="options" [plugins]="plugins">
+  <div class="embla__container">
+    @for (slide of slides; track $index) {
+    <div class="embla__slide">
+      <img [src]="slide" alt="Hotel Slide" />
+    </div>
+  }
+  </div>
+</div> -->
+<div class="embla" emblaCarousel [options]="options" [plugins]="plugins">
+  <div class="embla__container">
+    @for (slide of slides; track $index) {
+
+    <div class="embla__slide">
+      <div class="slide-content">
+        <img [src]="slide" alt="Hotel Slide" class="slide-image" />
+
+        <!-- Overlay content -->
+        <div class="slide-overlay">
+          <!-- <img src="assets/images/logo.png" alt="Logo" class="slide-logo" /> -->
+          <h2 class="slide-title">First Courtyard</h2>
+          <p class="slide-subtext">Coming Soon</p>
+          <p class="slide-subtext">Experience luxury & comfort in every stay</p>
+          <!-- <button class="slide-btn">Book Now</button> -->
+        </div>
+      </div>
+    </div>
+  }
+  </div>
+</div>
+
+<!-- 
+<section class="about-section">
+  <h2>Welcome to MyHotel</h2>
+  <p>
+    Enjoy premium hospitality, comfortable rooms, and an unforgettable stay.
+    Our hotel blends elegance with modern amenities for a truly relaxing experience.
+  </p>
+</section>
+
+<section class="rooms-preview">
+  <h2>Our Rooms</h2>
+
+  <div class="rooms-grid">
+
+    <div class="room-card">
+      <img src="https://source.unsplash.com/600x400/?hotel-room,luxury" alt="Room 1" />
+      <h3>Deluxe Room</h3>
+      <p>Spacious room with king-size bed, balcony, and scenic views.</p>
+      <a routerLink="/rooms">View Details</a>
+    </div>
+
+    <div class="room-card">
+      <img src="https://source.unsplash.com/600x401/?hotel-suite" alt="Room 2" />
+      <h3>Premium Suite</h3>
+      <p>Luxury suite with private lounge and modern interiors.</p>
+      <a routerLink="/rooms">View Details</a>
+    </div>
+
+    <div class="room-card">
+      <img src="https://source.unsplash.com/600x402/?hotel,bedroom" alt="Room 3" />
+      <h3>Family Room</h3>
+      <p>Comfortable room ideal for families with multiple beds.</p>
+      <a routerLink="/rooms">View Details</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="amenities-section">
+  <h2>Amenities</h2>
+  <div class="amenities-grid">
+
+    <div class="amenity-box">Free Wi-Fi</div>
+    <div class="amenity-box">Swimming Pool</div>
+    <div class="amenity-box">Room Service</div>
+    <div class="amenity-box">Restaurant</div>
+    <div class="amenity-box">Fitness Center</div>
+    <div class="amenity-box">Parking</div>
+
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Your Perfect Stay Awaits</h2>
+  <p>Book your next unforgettable experience today.</p>
+  <button routerLink="/contact">Contact Us</button>
+</section> -->
