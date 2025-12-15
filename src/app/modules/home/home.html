@@ -1,88 +1,137 @@
-<!-- <div class="embla" emblaCarousel [options]="options" [plugins]="plugins">
+<div class="embla hero" #heroEmbla="emblaCarousel" emblaCarousel [options]="options" [plugins]="plugins">
   <div class="embla__container">
     @for (slide of slides; track $index) {
     <div class="embla__slide">
-      <img [src]="slide" alt="Hotel Slide" />
-    </div>
-  }
-  </div>
-</div> -->
-<div class="embla" emblaCarousel [options]="options" [plugins]="plugins">
-  <div class="embla__container">
-    @for (slide of slides; track $index) {
-
-    <div class="embla__slide">
-      <div class="slide-content">
-        <img [src]="slide" alt="Hotel Slide" class="slide-image" />
-
-        <!-- Overlay content -->
-        <div class="slide-overlay">
-          <!-- <img src="assets/images/logo.png" alt="Logo" class="slide-logo" /> -->
-          <h2 class="slide-title">First Courtyard</h2>
-          <p class="slide-subtext">Coming Soon</p>
-          <p class="slide-subtext">Experience luxury & comfort in every stay</p>
-          <!-- <button class="slide-btn">Book Now</button> -->
+      <div class="hero-slide">
+        <img [src]="slide" alt="Hotel Slide" class="hero-bg" />
+        <div class="hero-content">
+          <h1>A Courtyard of Calm<br />Crafted for You</h1>
         </div>
       </div>
     </div>
-  }
+    }
   </div>
+  <button class="embla__prev" (click)="scrollPrev()" aria-label="Previous slide"> ‹</button>
+  <button class="embla__next" (click)="scrollNext()" aria-label="Next slide"> ›</button>
 </div>
 
-<!-- 
-<section class="about-section">
-  <h2>Welcome to MyHotel</h2>
-  <p>
-    Enjoy premium hospitality, comfortable rooms, and an unforgettable stay.
-    Our hotel blends elegance with modern amenities for a truly relaxing experience.
-  </p>
+<!-- ABOUT -->
+<section class="split">
+  <img class="shadow-wrapper" src="assets/images/rooftop-side-view.jpg" />
+  <div>
+    <h2 class="section-title">A Stay Crafted Around You</h2>
+    <p class="section-text" style="text-align:justify; line-height: 30px;">First Courtyard is more than just a place to
+      stay — it is a
+      thoughtfully designed retreat where comfort, calm, and character come together. Nestled in a serene setting, our
+      hotel is created for travelers who seek meaningful experiences, quiet moments, and a sense of belonging away from
+      home.
+      Every element at First Courtyard is inspired by warmth and simplicity. From the moment you step inside, you are
+      welcomed by open courtyards, soft natural light, and carefully curated interiors that blend timeless design with
+      modern comfort. Our spaces are intentionally crafted to slow you down, inviting you to pause, unwind, and
+      reconnect.
+      Our rooms are designed as personal sanctuaries, offering plush bedding, elegant finishes, and thoughtful details
+      that elevate your stay. Whether you’re visiting for a weekend escape, a business trip, or a longer stay, each room
+      provides a peaceful environment that balances functionality with refined aesthetics.
+      The courtyards — our signature spaces — offer. These open-air spaces reflect our philosophy of creating harmony
+      between architecture and nature, allowing guests to experience calm in the middle of everyday life.
+      At First Courtyard, every stay is crafted around you — your comfort, your rhythm, and your experience. We invite
+      you to slow down, feel at home, and create moments worth remembering.</p>
+    <a class="header-explore-btn" (click)="scrollTo('rooms-list-section')">EXPLORE</a>
+  </div>
 </section>
 
-<section class="rooms-preview">
-  <h2>Our Rooms</h2>
+<section class="split-second">
+  <div>
+    <h2 class="section-title">Paawana Restaurant</h2>
+    <p class="section-text" style="text-align:justify; line-height: 30px;">Paawana Restaurant at First Courtyard is a place where good food, calm surroundings, and warm hospitality come together naturally. Designed to feel inviting and unhurried, Paawana is ideal for guests who enjoy meaningful meals in a relaxed setting.
+
+The restaurant reflects the heritage charm of the property, with simple yet elegant interiors, soft lighting, and a peaceful atmosphere. Whether you’re starting your day with breakfast or winding down in the evening, Paawana offers a comfortable space to sit back and enjoy the moment.
+
+Our menu brings together local flavors and familiar favorites, prepared with care and fresh ingredients. Traditional recipes are thoughtfully balanced with comforting classics, ensuring there’s something for every palate. Each dish is cooked with attention to taste, quality, and presentation, making every meal satisfying without being overdone.
+
+Paawana is not just about food—it’s about the experience. Guests often find themselves lingering a little longer, sharing conversations, and enjoying the calm pace that defines First Courtyard. Our attentive service adds to the experience, offering warmth without intrusion and making every visit feel personal.
+
+Whether you’re staying at the property or visiting for a quiet meal, Paawana Restaurant welcomes you to enjoy honest flavors, relaxed dining, and a setting that feels both familiar and special. It’s a place where meals are enjoyed slowly, moments are shared, and every guest feels at home.</p>
+  </div>
+  <img  class="shadow-wrapper" src="assets/images/paawana-kitchen-inner.png" />
+</section>
+
+<!-- SERVICES -->
+<section class="services-exp">
+  <div class="services-header">
+    <h2 class="section-title">Signature Experiences</h2>
+    <p class="section-text">
+      From tranquil walks to vibrant evenings, each experience is designed to reflect the soul of the destination.
+    </p>
+  </div>
+
+  <div class="embla services-carousel" #serviceEmbla="emblaCarousel" emblaCarousel [plugins]="servicePlugins"
+    [options]="serviceOptions">
+    <div class="embla__container">
+      @for (service of services; track $index) {
+      <div class="embla__slide">
+        <div class="service-exp-card">
+          <div class="service-exp-content">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+          </div>
+          <img [src]="service.image" [alt]="service.title" />
+        </div>
+      </div>
+      }
+    </div>
+
+    <!-- Arrows -->
+    <button class="embla__prev" (click)="scrollServicePrev()">‹</button>
+    <button class="embla__next" (click)="scrollServiceNext()">›</button>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section class="rooms" id="rooms-list-section">
+  <h2 class="section-title">Where Comfort Finds Its Calm</h2>
+  <p class="section-text">
+    Elegant interiors, modern comforts, and a peaceful atmosphere.
+  </p>
 
   <div class="rooms-grid">
+    @for (room of rooms; track $index) {
+    <div class="room-card shadow-wrapper">
+      <img class="shadow-wrapper" [src]="room.image" [alt]="room.name" />
 
-    <div class="room-card">
-      <img src="https://source.unsplash.com/600x400/?hotel-room,luxury" alt="Room 1" />
-      <h3>Deluxe Room</h3>
-      <p>Spacious room with king-size bed, balcony, and scenic views.</p>
-      <a routerLink="/rooms">View Details</a>
+      <h4>{{ room.name }}</h4>
+      <p class="section-text">{{ room.description }}</p>
+
+      <div class="room-meta">
+        <div class="meta-item">
+          <span class="meta-label">Bedrooms</span>
+          <span class="meta-value">🛏 {{ room.bedrooms }}</span>
+        </div>
+
+        <div class="meta-item">
+          <span class="meta-label">Area</span>
+          <span class="meta-value">⬚ {{ room.area }}</span>
+        </div>
+      </div>
+
+      <div class="price">
+        <span>₹{{ room.price }} <small>/ night</small></span>
+        <button class="book-room-btn">BOOK</button>
+      </div>
     </div>
-
-    <div class="room-card">
-      <img src="https://source.unsplash.com/600x401/?hotel-suite" alt="Room 2" />
-      <h3>Premium Suite</h3>
-      <p>Luxury suite with private lounge and modern interiors.</p>
-      <a routerLink="/rooms">View Details</a>
-    </div>
-
-    <div class="room-card">
-      <img src="https://source.unsplash.com/600x402/?hotel,bedroom" alt="Room 3" />
-      <h3>Family Room</h3>
-      <p>Comfortable room ideal for families with multiple beds.</p>
-      <a routerLink="/rooms">View Details</a>
-    </div>
-
+    }
   </div>
 </section>
 
-<section class="amenities-section">
-  <h2>Amenities</h2>
-  <div class="amenities-grid">
-
-    <div class="amenity-box">Free Wi-Fi</div>
-    <div class="amenity-box">Swimming Pool</div>
-    <div class="amenity-box">Room Service</div>
-    <div class="amenity-box">Restaurant</div>
-    <div class="amenity-box">Fitness Center</div>
-    <div class="amenity-box">Parking</div>
-
+<!-- HERITAGE -->
+<section class="heritage">
+  <div>
+    <h2 class="section-title">Discover Our Heritage Retreat</h2>
+    <p class="section-text">Step into the timeless elegance of Mandawa Kothi, our heritage residence where history and
+      hospitality come together.</p>
+  </div>
+  <div class="full-image"></div>
+  <div>
+    <a class="header-explore-btn" href="https://www.mandawakothi.com/" target="_blank">EXPLORE</a>
   </div>
 </section>
-
-<section class="cta-section">
-  <h2>Your Perfect Stay Awaits</h2>
-  <p>Book your next unforgettable experience today.</p>
-  <button routerLink="/contact">Contact Us</button>
-</section> -->

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
-menuOpen: boolean= false;
+
+  public isScrolled: boolean = false;
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.isScrolled = window.scrollY > 50;
+  }
+
+  private route = inject(Router);
+
+  public routeToHome():void{
+    this.route.navigate(["/"]);
+  }
 }

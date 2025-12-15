@@ -1,21 +1,42 @@
-<footer class="main-footer">
-  <div class="footer-container">
+<!-- FOOTER -->
+<footer class="lux-footer">
+  <div class="footer-overlay"></div>
 
-    <div class="footer-left">
-      <h3>MyHotel</h3>
-      <p>Your comfort is our priority. Experience luxury at its finest.</p>
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Explore More</h4>
+        <ul>
+          <!-- <li><a routerLink="/about">About Us</a></li> -->
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Rooms</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="https://www.mandawakothi.com/" target="_blank">Mandawa Kothi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-center">
+
+        <h4>Contact Us</h4>
+        <a href="tel:+919876543210">+91 9876543210</a>
+        <a href="mailto:example@gmail.com">example@gmail.com</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="socials">
+            <a href="https://www.instagram.com/first_courtyard/" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+      </div>
     </div>
 
-    <div class="footer-links">
-      <a routerLink="/">Home</a>
-      <a routerLink="/rooms">Rooms</a>
-      <a routerLink="/about">About</a>
-      <a routerLink="/contact">Contact</a>
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <span>Copyright © {{ currentYear }} The First Courtyard</span>
+      <span>Privacy Policy &nbsp;&nbsp; Terms & Services</span>
     </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © {{ currentYear }} MyHotel. All Rights Reserved.
   </div>
 </footer>
