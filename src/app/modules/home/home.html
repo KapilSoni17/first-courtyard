@@ -20,22 +20,13 @@
   <img class="shadow-wrapper" src="assets/images/rooftop-side-view.jpg" />
   <div>
     <h2 class="section-title">A Stay Crafted Around You</h2>
-    <p class="section-text" style="text-align:justify; line-height: 30px;">First Courtyard is more than just a place to
-      stay — it is a
-      thoughtfully designed retreat where comfort, calm, and character come together. Nestled in a serene setting, our
-      hotel is created for travelers who seek meaningful experiences, quiet moments, and a sense of belonging away from
-      home.
-      Every element at First Courtyard is inspired by warmth and simplicity. From the moment you step inside, you are
-      welcomed by open courtyards, soft natural light, and carefully curated interiors that blend timeless design with
-      modern comfort. Our spaces are intentionally crafted to slow you down, inviting you to pause, unwind, and
-      reconnect.
-      Our rooms are designed as personal sanctuaries, offering plush bedding, elegant finishes, and thoughtful details
-      that elevate your stay. Whether you’re visiting for a weekend escape, a business trip, or a longer stay, each room
-      provides a peaceful environment that balances functionality with refined aesthetics.
-      The courtyards — our signature spaces — offer. These open-air spaces reflect our philosophy of creating harmony
-      between architecture and nature, allowing guests to experience calm in the middle of everyday life.
-      At First Courtyard, every stay is crafted around you — your comfort, your rhythm, and your experience. We invite
-      you to slow down, feel at home, and create moments worth remembering.</p>
+    <p class="section-text expandable-text" [style.text-align]="'justify'" [style.line-height]="'30px'">
+      {{ aboutText }}
+      @if (!isDesktop && !showFullAboutText) {
+      <span class="read-more-link" (click)="toggleAboutText()">Read More</span>
+      }
+    </p>
+
     <a class="header-explore-btn" (click)="scrollTo('rooms-list-section')">EXPLORE</a>
   </div>
 </section>
@@ -43,15 +34,12 @@
 <section class="split-second">
   <div>
     <h2 class="section-title">Paawana Restaurant</h2>
-    <p class="section-text" style="text-align:justify; line-height: 30px;">Paawana Restaurant at First Courtyard is a place where good food, calm surroundings, and warm hospitality come together naturally. Designed to feel inviting and unhurried, Paawana is ideal for guests who enjoy meaningful meals in a relaxed setting.
-
-The restaurant reflects the heritage charm of the property, with simple yet elegant interiors, soft lighting, and a peaceful atmosphere. Whether you’re starting your day with breakfast or winding down in the evening, Paawana offers a comfortable space to sit back and enjoy the moment.
-
-Our menu brings together local flavors and familiar favorites, prepared with care and fresh ingredients. Traditional recipes are thoughtfully balanced with comforting classics, ensuring there’s something for every palate. Each dish is cooked with attention to taste, quality, and presentation, making every meal satisfying without being overdone.
-
-Paawana is not just about food—it’s about the experience. Guests often find themselves lingering a little longer, sharing conversations, and enjoying the calm pace that defines First Courtyard. Our attentive service adds to the experience, offering warmth without intrusion and making every visit feel personal.
-
-Whether you’re staying at the property or visiting for a quiet meal, Paawana Restaurant welcomes you to enjoy honest flavors, relaxed dining, and a setting that feels both familiar and special. It’s a place where meals are enjoyed slowly, moments are shared, and every guest feels at home.</p>
+    <p class="section-text expandable-text" [style.text-align]="'justify'" [style.line-height]="'30px'">
+      {{ paawanaText }}
+      @if (!isDesktop && !showFullPaawanaText) {
+      <span class="read-more-link" (click)="togglePaawanaText()">Read More</span>
+      }
+    </p>
   </div>
   <img  class="shadow-wrapper" src="assets/images/paawana-kitchen-inner.png" />
 </section>

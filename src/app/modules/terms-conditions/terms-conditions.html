@@ -1,0 +1,47 @@
+<div class="terms-page">
+  <!-- Introduction -->
+  <div class="terms-container">
+    <div class="terms-intro">
+      <h1>Terms & Conditions</h1>
+      <p>
+        Please read these terms and conditions carefully. When you make a booking, you accept on behalf of your party the terms of these booking conditions. It is your responsibility to ensure that all of the details on your confirmation documents are correct and to bring to our attention any errors or discrepancies within 48 hours of your booking.
+      </p>
+    </div>
+
+    <!-- Sections -->
+    <div class="terms-sections">
+      @for (section of sections; track $index) {
+        <div class="term-section">
+          <h2 class="section-title">{{ section.title }}</h2>
+          
+          @if (section.content) {
+            <p class="section-content">{{ section.content }}</p>
+          }
+          
+          @if (section.list) {
+            <ul class="section-list">
+              @for (item of section.list; track $index) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          }
+          
+          @if (section.subSections) {
+            <div class="sub-sections">
+              @for (sub of section.subSections; track $index) {
+                <div class="sub-section">
+                  <strong>{{ sub.subtitle }}</strong> {{ sub.text }}
+                </div>
+              }
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+    <!-- Footer -->
+    <div class="terms-footer">
+      <p>We look forward to welcoming you to First Courtyard and ensuring your stay is comfortable, peaceful, and memorable.</p>
+    </div>
+  </div>
+</div>

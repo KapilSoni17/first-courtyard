@@ -1,553 +1,464 @@
-        :root {
-          --primary-font: 'Montserrat', sans-serif;
-          --secondary-font: 'Inter', sans-serif;
-          --text-dark: #1f1f1f;
-          --text-light: #ffffff;
-          --muted: #7c7c7c;
-          --border: #e5e5e5;
-          --bg-dark: #2e2e2e;
-        }
+:root {
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Inter', sans-serif;
+  --text-dark: #1f1f1f;
+  --text-light: #ffffff;
+  --muted: #7c7c7c;
+  --border: #e5e5e5;
+  --bg-dark: #2e2e2e;
+}
 
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-          font-family: "MarkOT";
-          /* font-family: var(--secondary-font); */
-          color: var(--text-dark);
-          line-height: 1;
-        }
+body {
+  font-family: "MarkOT";
+  color: var(--text-dark);
+  line-height: 1;
+}
 
-        a {
-          text-decoration: none;
-          color: inherit;
-        }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-        /* ================= HERO ================= */
-        .hero {
-          height: 100vh;
-          position: relative;
-          overflow: hidden;
-        }
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
 
-        .hero::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          /* background: linear-gradient(to bottom,
-              rgba(0, 0, 0, 0.55),
-              rgba(0, 0, 0, 0.35),
-              rgba(0, 0, 0, 0.55)); */
-          z-index: 2;
-        }
-
-        /* .hero-content::before {
+.hero::after {
   content: '';
   position: absolute;
-  width: 80%;
-  max-width: 800px;
-  height: 260px;
+  inset: 0;
+  z-index: 2;
+}
 
-  background: rgba(0, 0, 0, 0.45);
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1,
+.hero-content a {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  z-index: 4;
+  margin-bottom: 24px;
+}
+
+.btn-outline {
+  padding: 12px 32px;
+  border: 1px solid #6D6B6D;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.embla {
+  width: 100%;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.hero-slide {
+  height: 100vh;
+  position: relative;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero Navigation Buttons */
+.embla__prev,
+.embla__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.25);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
   backdrop-filter: blur(6px);
-  border-radius: 6px;
-
-  z-index: -1;
-} */
-
-        .hero-content {
-          position: absolute;
-          inset: 0;
-          z-index: 3;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          color: #fff;
-        }
-
-        .hero-content h1,
-        .hero-content a {
-          text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-        }
-
-
-        .hero h1 {
-          font-size: 48px;
-          font-weight: 500;
-          letter-spacing: 0.5px;
-          z-index: 4;
-          margin-bottom: 24px;
-        }
-
-        .btn-outline {
-          padding: 12px 32px;
-          border: 1px solid #6D6B6D;
-          font-size: 13px;
-          letter-spacing: 1px;
-        }
-
-        .embla {
-          width: 100%;
-        }
-
-        .embla__container {
-          display: flex;
-        }
-
-        .embla__slide {
-          flex: 0 0 100%;
-          position: relative;
-        }
-
-        .hero-slide {
-          height: 100vh;
-          position: relative;
-        }
-
-        .hero-bg {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        /* ================= SECTION ================= */
-        section {
-          padding: 100px 80px;
-        }
-
-        .split {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          /* gap: 1px; */
-          align-items: center;
-          background-color: #F5F5F5;
-
-        }
-
-        .split img {
-          width: 465px;
-          height: 550px;
-          object-fit: cover;
-          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-          border-radius: 1%;
-        }
-
-        .split-second {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 100px;
-          align-items: center;
-          background-color: #F5F5F5;
-        }
-
-        .split-second img {
-          width: 465px;
-          height: 550px;
-          object-fit: cover;
-          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-          border-radius: 1%;
-        }
-
-        .section-title {
-          font-family: var(--primary-font);
-          font-size: 32px;
-          margin-bottom: 5px;
-        }
-
-        .section-text {
-          line-height: 25px;
-          color: var(--muted);
-          font-size: 14px;
-          margin-bottom: 24px;
-        }
-
-        /* ================= SERVICES ================= */
-
-        .services-exp {
-          padding: 100px 80px;
-          background: #ffffff;
-        }
-
-        .services-header {
-          text-align: center;
-          max-width: 900px;
-          margin: 0 auto 60px;
-        }
-
-        .services-header .section-title {
-          font-size: 36px;
-        }
-
-        .services-header .section-text {
-          max-width: 720px;
-          margin: 0 auto;
-        }
-
-        .services-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 40px;
-        }
-
-        .service-exp-card {
-          display: flex;
-          flex-direction: column;
-          background: #2f2f2f;
-          color: #ffffff;
-        }
-
-        .service-exp-content {
-          padding: 32px;
-          min-height: 150px;
-          text-align: center;
-        }
-
-        .service-exp-content h3 {
-          font-family: var(--primary-font);
-          font-size: 22px;
-          margin-bottom: 12px;
-        }
-
-        .service-exp-content p {
-          font-size: 14px;
-          opacity: 0.85;
-          line-height: 1.6;
-        }
-
-        .service-exp-card img {
-          width: 100%;
-          height: 280px;
-          object-fit: cover;
-        }
-
-        /* ================= ROOMS ================= */
-        .room-meta {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 16px;
-          margin: 20px 0;
-          font-size: 13px;
-          color: var(--muted);
-        }
-
-        .meta-item {
-          display: flex;
-          flex-direction: column;
-          gap: 6px;
-        }
-
-        .meta-label {
-          font-size: 12px;
-          letter-spacing: 0.5px;
-        }
-
-        .meta-value {
-          font-size: 14px;
-          color: var(--text-dark);
-          display: flex;
-          align-items: center;
-          gap: 6px;
-        }
-
-        .price small {
-          font-size: 12px;
-          color: var(--muted);
-        }
-
-        .rooms {
-          text-align: center;
-          background-color: #F5F5F5;
-        }
-
-        .rooms-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 32px;
-          margin-top: 60px;
-        }
-
-        .room-card {
-          border: 1px solid #6D6B6D;
-          padding: 25px;
-          text-align: left;
-          width: 360px;
-          height: 460px;
-          border-radius: 2%;
-        }
-
-        .room-card img {
-          width: 312px;
-          height: 224px;
-          object-fit: cover;
-          margin-bottom: 16px;
-          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-          border-radius: 1%;
-        }
-
-        .room-card h4 {
-          font-family: var(--primary-font);
-          font-size: 18px;
-          margin-bottom: 8px;
-        }
-
-        .price {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-top: 16px;
-          font-size: 14px;
-        }
-
-        .price button {
-          padding: 6px 16px;
-          border: 1px solid var(--text-dark);
-          background: #333333;
-          color: #ffff;
-          cursor: pointer;
-          font-size: 12px;
-        }
-
-        /* ================= FULL IMAGE ================= */
-        .heritage {
-          text-align: center;
-          /* background-color: #f5f5f5; */
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-        }
-
-        .full-image {
-          background: url('../../../assets/images/mandawa-kothi.png') center/cover no-repeat;
-          height: 520px;
-          width: 1160px;
-          margin-left: 4rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          text-align: center;
-          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-          border-radius: 1%;
-
-             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
-          border-radius: 8px !important;
-          transition: box-shadow 0.3s ease !important;
-        }
-
-        /* ================= HERITAGE BANNER ================= */
-        .heritage-banner {
-          position: relative;
-          height: 520px;
-          background: url('../../../assets/images/bird-view.jpg') center/cover no-repeat;
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          padding: 80px;
-          color: #fff;
-
-        }
-
-        .heritage-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
-        }
-
-        .heritage-content {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          gap: 40px;
-          z-index: 2;
-        }
-
-        .contact-block p {
-          font-size: 14px;
-          opacity: 0.8;
-          margin-bottom: 8px;
-        }
-
-        .contact-block h3 {
-          font-size: 20px;
-          font-weight: 400;
-        }
-
-        /* ================= RESPONSIVE ================= */
-
-        /* HERO */
-        @media (max-width: 768px) {
-          .hero h1 {
-            font-size: 34px;
-            line-height: 1.2;
-            padding: 0 20px;
-          }
-
-          .btn-outline {
-            padding: 10px 24px;
-            font-size: 12px;
-          }
-        }
-
-        /* SPLIT / ABOUT SECTION */
-        @media (max-width: 1024px) {
-          .split {
-            grid-template-columns: 1fr;
-            gap: 40px;
-            text-align: center;
-          }
-
-          .split img {
-            width: 100%;
-            height: auto;
-            max-height: 420px;
-            margin: 0 auto;
-          }
-        }
-
-        /* SERVICES SECTION */
-        @media (max-width: 1024px) {
-          .services-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .service-exp-card img {
-            height: 220px;
-          }
-        }
-
-        /* ROOMS SECTION */
-        @media (max-width: 1024px) {
-          .rooms-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
-          .room-card {
-            width: 100%;
-            height: auto;
-          }
-
-          .room-card img {
-            width: 100%;
-            height: 200px;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .rooms-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .room-card {
-            padding: 20px;
-          }
-        }
-
-        /* HERITAGE SECTION */
-        @media (max-width: 1024px) {
-          .full-image {
-            width: 100%;
-            height: 360px;
-            margin-left: 0;
-
-               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
-          border-radius: 8px !important;
-          transition: box-shadow 0.3s ease !important;
-          }
-
-          .heritage {
-            padding: 80px 40px;
-          }
-        }
-
-        .embla {
-          position: relative;
-        }
-
-        .embla__prev,
-        .embla__next {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background: rgba(0, 0, 0, 0.25);
-          border: none;
-          width: 48px;
-          height: 48px;
-          border-radius: 50%;
-          font-size: 28px;
-          color: #fff;
-          cursor: pointer;
-          z-index: 10;
-          backdrop-filter: blur(6px);
-          transition: all 0.3s ease;
-        }
-
-        .embla__prev:hover,
-        .embla__next:hover {
-          background: rgba(0, 0, 0, 0.45);
-          transform: translateY(-50%) scale(1.05);
-        }
-
-
-        .embla__prev {
-          left: 20px;
-        }
-
-        .embla__next {
-          right: 20px;
-        }
-
-
-
-        /* Services Embla */
-        .services-carousel {
-          position: relative;
-          overflow: hidden;
-        }
-
-        .services-carousel .embla__container {
-          display: flex;
-        }
-
-        .services-carousel .embla__slide {
-          flex: 0 0 50%;
-          padding-right: 40px;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-          .services-carousel .embla__slide {
-            flex: 0 0 100%;
-            padding-right: 20px;
-          }
-        }
-
-        /* Keep your existing card styles */
-        .service-exp-card {
-          height: 100%;
-        }
-
-
-        .book-room-btn {
-          padding: 12px 33px;
-          color: #fff !important;
-          letter-spacing: 0;
-          font-size: 18px;
-          border: 1px solid #333 !important;
-          border-radius: 50px;
-          cursor: pointer;
-          background: #333;
-          border-color: #333;
-        }
-
-        .book-room-btn:hover {
-          color: #2e2e2e !important;
-          background-color: #f5f5f5 !important;
-        }
+  transition: all 0.3s ease;
+}
+
+.embla__prev:hover,
+.embla__next:hover {
+  background: rgba(0, 0, 0, 0.45);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.embla__prev {
+  left: 20px;
+}
+
+.embla__next {
+  right: 20px;
+}
+
+/* ================= SECTION ================= */
+section {
+  padding: 100px 80px;
+}
+
+.section-title {
+  font-family: var(--primary-font);
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.section-text {
+  line-height: 25px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ================= SPLIT / ABOUT SECTION ================= */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: #F5F5F5;
+  padding: 100px 80px;
+}
+
+.split img {
+  width: 465px;
+  height: 550px;
+  object-fit: cover;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  border-radius: 1%;
+}
+
+.split .section-title {
+  font-family: var(--primary-font);
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.split .section-text {
+  line-height: 30px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ================= SPLIT SECOND / PAAWANA RESTAURANT ================= */
+.split-second {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+  background-color: #F5F5F5;
+  padding: 100px 80px;
+}
+
+.split-second img {
+  width: 465px;
+  height: 550px;
+  object-fit: cover;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  border-radius: 1%;
+}
+
+.split-second .section-title {
+  font-family: var(--primary-font);
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.split-second .section-text {
+  line-height: 30px;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* ================= SERVICES / EXPERIENCES ================= */
+.services-exp {
+  padding: 100px 80px;
+  background: #ffffff;
+}
+
+.services-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.services-header .section-title {
+  font-size: 36px;
+}
+
+.services-header .section-text {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Services Carousel */
+.services-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.services-carousel .embla__container {
+  display: flex;
+  gap: 20px;
+}
+
+.services-carousel .embla__slide {
+  flex: 0 0 calc(50% - 10px);
+  min-width: 0;
+}
+
+.service-exp-card {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #2f2f2f;
+  color: #ffffff;
+    align-items: flex-start;
+}
+
+.service-exp-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.service-exp-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+
+.service-exp-content h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-family: var(--primary-font);
+  font-weight: 600;
+}
+
+.service-exp-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Service Carousel Navigation Buttons */
+.services-carousel .embla__prev,
+.services-carousel .embla__next {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.services-carousel .embla__prev:hover,
+.services-carousel .embla__next:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.services-carousel .embla__prev {
+  left: 20px;
+}
+
+.services-carousel .embla__next {
+  right: 20px;
+}
+
+/* ================= ROOMS ================= */
+.rooms {
+  text-align: center;
+  background-color: #F5F5F5;
+  padding: 100px 80px;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.room-card {
+  border: 1px solid #6D6B6D;
+  padding: 25px;
+  text-align: left;
+  width: 360px;
+  height: 460px;
+  border-radius: 2%;
+}
+
+.room-card img {
+  width: 312px;
+  height: 224px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  border-radius: 1%;
+}
+
+.room-card h4 {
+  font-family: var(--primary-font);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.room-meta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 20px 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta-label {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.meta-value {
+  font-size: 14px;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.price small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.price button {
+  padding: 6px 16px;
+  border: 1px solid var(--text-dark);
+  background: #333333;
+  color: #ffff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* ================= HERITAGE ================= */
+.heritage {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 100px 80px;
+}
+
+.full-image {
+  background: url('../../../assets/images/mandawa-kothi.png') center/cover no-repeat;
+  height: 520px;
+  width: 1160px;
+  margin-left: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 8px !important;
+  transition: box-shadow 0.3s ease !important;
+}
+
+/* ================= BUTTONS ================= */
+.book-room-btn {
+  padding: 12px 33px;
+  color: #fff !important;
+  letter-spacing: 0;
+  font-size: 18px;
+  border: 1px solid #333 !important;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #333;
+  border-color: #333;
+  transition: all 0.3s ease;
+}
+
+.book-room-btn:hover {
+  color: #2e2e2e !important;
+  background-color: #f5f5f5 !important;
+}
 
 
 .header-explore-btn {
@@ -570,10 +481,426 @@
   color: #ffffff;
 }
 
-
-.shadow-wrapper{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6) !important;
-    border-radius: 8px !important;
-    transition: box-shadow 0.3s ease !important;
+.read-more-link {
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 4px;
+  transition: color 0.3s ease;
 }
 
+.read-more-link:hover {
+  color: #000;
+}
+
+.expandable-text {
+  white-space: pre-line;
+  transition: all 0.3s ease;
+}
+
+/* ================= UTILITY CLASSES ================= */
+.shadow-wrapper {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6) !important;
+  border-radius: 8px !important;
+  transition: box-shadow 0.3s ease !important;
+}
+
+/* ================= RESPONSIVE STYLES ================= */
+
+/* Tablet - 1024px */
+@media (max-width: 1024px) {
+
+  /* General Section Padding */
+  section {
+    padding: 80px 40px;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 40px;
+    padding: 0 40px;
+  }
+
+  /* Split / About Section */
+  .split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    padding: 80px 40px;
+  }
+
+  .split img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    margin: 0 auto;
+  }
+
+  .split .section-title {
+    font-size: 28px;
+  }
+
+  .split .section-text {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .split .header-explore-btn {
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  /* Split Second / Paawana Restaurant */
+  .split-second {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    padding: 80px 40px;
+  }
+
+  .split-second img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    margin: 0 auto;
+    order: 2;
+  }
+
+  .split-second>div {
+    order: 1;
+  }
+
+  .split-second .section-title {
+    font-size: 28px;
+  }
+
+  .split-second .section-text {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  /* Services */
+  .services-exp {
+    padding: 80px 40px;
+  }
+
+  .services-carousel .embla__slide {
+    flex: 0 0 100%;
+    padding-right: 0;
+  }
+
+  .services-carousel .embla__container {
+    gap: 0;
+  }
+
+  .service-exp-card {
+    height: 450px;
+  }
+
+  .service-exp-content h3 {
+    font-size: 28px;
+  }
+
+  .service-exp-content p {
+    font-size: 15px;
+  }
+
+  /* Rooms */
+  .rooms {
+    padding: 80px 40px;
+  }
+
+  .rooms-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .room-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .room-card img {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* Heritage */
+  .heritage {
+    padding: 80px 40px;
+  }
+
+  .full-image {
+    width: 100%;
+    height: 360px;
+    margin-left: 0;
+  }
+}
+
+/* Mobile - 768px */
+@media (max-width: 768px) {
+
+  /* General Section Padding */
+  section {
+    padding: 60px 24px;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    padding: 0 20px;
+  }
+
+  .btn-outline {
+    padding: 10px 24px;
+    font-size: 12px;
+  }
+
+  .embla__prev,
+  .embla__next {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .embla__prev {
+    left: 10px;
+  }
+
+  .embla__next {
+    right: 10px;
+  }
+
+  /* Split / About Section */
+  .split {
+    padding: 60px 24px;
+    gap: 32px;
+  }
+
+  .split img {
+    max-height: 300px;
+  }
+
+  .split .section-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .split .section-text {
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .split .header-explore-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  /* Split Second / Paawana Restaurant */
+  .split-second {
+    padding: 60px 24px;
+    gap: 32px;
+  }
+
+  .split-second img {
+    max-height: 300px;
+  }
+
+  .split-second .section-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .split-second .section-text {
+    font-size: 13px;
+    line-height: 24px;
+    text-align: justify;
+  }
+
+  /* Services */
+  .services-exp {
+    padding: 60px 24px;
+  }
+
+  .services-header {
+    margin-bottom: 40px;
+  }
+
+  .services-header .section-title {
+    font-size: 28px;
+  }
+
+  .service-exp-card {
+    height: 400px;
+  }
+
+  .service-exp-content {
+    padding: 24px;
+    max-width: 90%;
+  }
+
+  .service-exp-content h3 {
+    font-size: 24px;
+  }
+
+  .service-exp-content p {
+    font-size: 14px;
+  }
+
+  .services-carousel .embla__prev,
+  .services-carousel .embla__next {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .services-carousel .embla__prev {
+    left: 10px;
+  }
+
+  .services-carousel .embla__next {
+    right: 10px;
+  }
+
+  /* Rooms */
+  .rooms {
+    padding: 60px 24px;
+  }
+
+  .rooms-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .room-card {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .room-card img {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* Heritage */
+  .heritage {
+    padding: 60px 24px;
+  }
+
+  .full-image {
+    height: 300px;
+  }
+
+  .header-explore-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile - 480px */
+@media (max-width: 480px) {
+
+  /* General Section Padding */
+  section {
+    padding: 40px 20px;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 28px;
+    padding: 0 16px;
+  }
+
+  /* Split / About Section */
+  .split {
+    padding: 40px 20px;
+    gap: 24px;
+  }
+
+  .split img {
+    max-height: 250px;
+  }
+
+  .split .section-title {
+    font-size: 22px;
+  }
+
+  .split .section-text {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  /* Split Second / Paawana Restaurant */
+  .split-second {
+    padding: 40px 20px;
+    gap: 24px;
+  }
+
+  .split-second img {
+    max-height: 250px;
+  }
+
+  .split-second .section-title {
+    font-size: 22px;
+  }
+
+  .split-second .section-text {
+    font-size: 12px;
+    line-height: 22px;
+  }
+
+  /* Services */
+  .services-exp {
+    padding: 40px 20px;
+  }
+
+  .services-header .section-title {
+    font-size: 24px;
+  }
+
+  .service-exp-card {
+    height: 350px;
+  }
+
+  .service-exp-content {
+    padding: 20px;
+  }
+
+  .service-exp-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .service-exp-content p {
+    font-size: 13px;
+  }
+
+  /* Rooms */
+  .rooms {
+    padding: 40px 20px;
+  }
+
+  .room-card {
+    padding: 16px;
+  }
+
+  .room-card img {
+    height: 180px;
+  }
+
+  .room-card h4 {
+    font-size: 16px;
+  }
+
+  /* Heritage */
+  .heritage {
+    padding: 40px 20px;
+  }
+
+  .full-image {
+    height: 250px;
+  }
+}

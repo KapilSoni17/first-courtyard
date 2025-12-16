@@ -1,0 +1,310 @@
+/* terms-conditions.component.css */
+
+.terms-page {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: "MarkOT";
+  color: #333;
+}
+
+/* Header Section */
+.terms-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 60px 24px;
+}
+
+.terms-header-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.terms-header h1 {
+  font-family: "MarkOT";
+  font-size: 42px;
+  font-weight: 300;
+  color: #333;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
+}
+
+.last-updated {
+  font-size: 14px;
+  color: #7c7c7c;
+  margin: 0;
+}
+
+/* Container */
+.terms-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 147px 24px 60px 24px;
+}
+
+/* Introduction */
+.terms-intro {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.terms-intro p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+}
+
+/* Sections Container */
+.terms-sections {
+  background-color: #ffffff;
+  padding: 48px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Individual Section */
+.term-section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.term-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.section-title {
+  font-family: "MarkOT";
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.section-content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin: 0 0 16px 0;
+  white-space: pre-line;
+}
+
+.section-content:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+.section-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+}
+
+.section-list li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.section-list li::before {
+  content: '•';
+  position: absolute;
+  left: 8px;
+  color: #333;
+  font-weight: bold;
+}
+
+.section-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Sub-sections */
+.sub-sections {
+  margin-top: 20px;
+}
+
+.sub-section {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 16px;
+  padding-left: 20px;
+  border-left: 3px solid #e5e5e5;
+}
+
+.sub-section:last-child {
+  margin-bottom: 0;
+}
+
+.sub-section strong {
+  color: #333;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Footer */
+.terms-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 32px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.terms-footer p {
+  font-size: 15px;
+  font-style: italic;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .terms-header {
+    padding: 48px 24px;
+  }
+
+  .terms-header h1 {
+    font-size: 36px;
+  }
+
+  .terms-container {
+    padding: 48px 24px;
+  }
+
+  .terms-sections {
+    padding: 36px 24px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .terms-header {
+    padding: 32px 20px;
+  }
+
+  .terms-header h1 {
+    font-size: 28px;
+  }
+
+  .last-updated {
+    font-size: 13px;
+  }
+
+  .terms-container {
+    padding: 147px 20px 32px 20px;
+  }
+
+  .terms-intro {
+    padding: 24px;
+  }
+
+  .terms-intro p {
+    font-size: 14px;
+  }
+
+  .terms-sections {
+    padding: 24px 20px;
+  }
+
+  .term-section {
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+  }
+
+  .section-title {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .section-content {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .section-list li {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .sub-section {
+    font-size: 14px;
+    padding-left: 16px;
+    margin-bottom: 12px;
+  }
+
+  .terms-footer {
+    margin-top: 40px;
+    padding: 24px 20px;
+  }
+
+  .terms-footer p {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .terms-header h1 {
+    font-size: 24px;
+  }
+
+  .terms-intro {
+    padding: 20px;
+  }
+
+  .terms-sections {
+    padding: 20px 16px;
+  }
+
+  .section-title {
+    font-size: 14px;
+  }
+
+  .section-content,
+  .section-list li,
+  .sub-section {
+    font-size: 13px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .terms-page {
+    background-color: white;
+  }
+
+  .terms-header,
+  .terms-intro,
+  .terms-sections {
+    box-shadow: none;
+    border: none;
+  }
+
+  .term-section {
+    page-break-inside: avoid;
+  }
+
+  .section-title {
+    page-break-after: avoid;
+  }
+}
