@@ -30,9 +30,9 @@
       <div class="footer-col">
         <h4>Follow Us</h4>
         <div class="socials">
-            <a href="https://www.instagram.com/first_courtyard/" target="_blank" aria-label="Instagram">
-              <i style="font-size: 25px;" class="fab fa-instagram"></i>
-            </a>
+          <a href="https://www.instagram.com/first_courtyard/" target="_blank" aria-label="Instagram">
+            <i style="font-size: 25px;" class="fab fa-instagram"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -40,8 +40,11 @@
     <div class="footer-divider"></div>
 
     <div class="footer-bottom">
-      <span>Copyright © {{ currentYear }} The First Courtyard</span>
-      <span>Privacy Policy &nbsp;&nbsp; Terms & Services</span>
+      <span style="font-size: 14px; cursor: pointer;">Copyright © {{ currentYear }} The First Courtyard</span>
+      <div style="display: grid; gap: 5px; font-size: 14px; cursor: pointer;">
+        <span>Privacy Policy </span>
+        <span (click)="routeTo('terms-conditions')">Terms & Conditions</span>
+      </div>
     </div>
   </div>
 </footer>
