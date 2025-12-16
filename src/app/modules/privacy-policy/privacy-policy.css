@@ -1,0 +1,97 @@
+/* Page container */
+.privacy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 147px 24px 60px 24px;
+  font-family: "MarkOT";
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Page title */
+.privacy-container h1 {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+/* Section wrapper */
+.privacy-container section {
+  background-color: #ffffff;
+  padding: 32px;
+  margin-bottom: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Section heading */
+.privacy-container h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+/* Section content */
+.content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .privacy-container {
+    padding: 48px 24px;
+  }
+
+  .privacy-container h1 {
+    font-size: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .privacy-container {
+    padding: 147px 20px 32px 20px;
+  }
+
+  .privacy-container h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .privacy-container section {
+    padding: 24px;
+  }
+
+  .privacy-container h2 {
+    font-size: 15px;
+  }
+
+  .content {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .privacy-container h1 {
+    font-size: 24px;
+  }
+
+  .privacy-container section {
+    padding: 20px;
+  }
+
+  .content {
+    font-size: 13px;
+  }
+}
