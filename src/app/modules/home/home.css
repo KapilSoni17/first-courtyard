@@ -42,13 +42,22 @@ a {
 .hero-content {
   position: absolute;
   inset: 0;
-  z-index: 3;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
+  pointer-events: none;
+}
+
+.hero-content h1 {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 32px 48px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content h1,
@@ -101,7 +110,7 @@ a {
 .embla__prev,
 .embla__next {
   position: absolute;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.25);
   border: none;
@@ -155,14 +164,16 @@ section {
   align-items: center;
   background-color: #F5F5F5;
   padding: 100px 80px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid grey;
 }
 
 .split img {
   width: 465px;
-  height: 550px;
+  height: 520px;
   object-fit: cover;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-  border-radius: 1%;
 }
 
 .split .section-title {
@@ -193,7 +204,6 @@ section {
   height: 550px;
   object-fit: cover;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-  border-radius: 1%;
 }
 
 .split-second .section-title {
@@ -255,7 +265,6 @@ section {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 8px;
   background: #2f2f2f;
   color: #ffffff;
     align-items: flex-start;
@@ -278,7 +287,6 @@ section {
   color: #fff;
   padding: 40px;
   background: rgba(0, 0, 0, 0.6);
-  border-radius: 8px;
 }
 
 .service-exp-content h3 {
@@ -300,13 +308,12 @@ section {
   color: #fff;
   background: #00000040;
   position: absolute;
-  top: 60%;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 10;
   border: none;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   font-size: 28px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -348,7 +355,6 @@ section {
   padding: 25px;
   text-align: left;
   width: 360px;
-  border-radius: 2%;
 }
 
 .room-card img {
@@ -357,7 +363,6 @@ section {
   object-fit: cover;
   margin-bottom: 16px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-  border-radius: 1%;
 }
 
 .room-card h4 {
@@ -436,7 +441,6 @@ section {
   color: white;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
-  border-radius: 8px !important;
   transition: box-shadow 0.3s ease !important;
 }
 
@@ -447,7 +451,6 @@ section {
   letter-spacing: 0;
   font-size: 18px;
   border: 1px solid #333 !important;
-  border-radius: 50px;
   cursor: pointer;
   background: #333;
   border-color: #333;
@@ -464,7 +467,6 @@ section {
   padding: 12px 33px;
   font-size: 18px;
   letter-spacing: 0;
-  border-radius: 50px;
   cursor: pointer;
   white-space: nowrap;
 
@@ -501,7 +503,6 @@ section {
 /* ================= UTILITY CLASSES ================= */
 .shadow-wrapper {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6) !important;
-  border-radius: 8px !important;
   transition: box-shadow 0.3s ease !important;
 }
 
@@ -519,6 +520,10 @@ section {
   .hero h1 {
     font-size: 40px;
     padding: 0 40px;
+  }
+
+  .hero-content h1 {
+    padding: 28px 40px;
   }
 
   /* Split / About Section */
@@ -650,6 +655,11 @@ section {
     font-size: 34px;
     line-height: 1.2;
     padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    padding: 24px 32px;
+    font-size: 34px;
   }
 
   .btn-outline {
@@ -802,6 +812,18 @@ section {
 /* Small Mobile - 480px */
 @media (max-width: 480px) {
 
+  .embla__prev, .embla__next{
+    top: 90%;
+  }
+  
+  .services-carousel .embla__prev,
+  .services-carousel .embla__next {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    top: 90%;
+  }
+
   /* General Section Padding */
   section {
     padding: 40px 20px;
@@ -817,6 +839,11 @@ section {
   .split {
     padding: 40px 20px;
     gap: 24px;
+  }
+
+  .hero-content h1 {
+    padding: 20px 24px;
+    font-size: 28px;
   }
 
   .split img {
@@ -903,3 +930,8 @@ section {
     height: 250px;
   }
 }
+
+
+
+
+

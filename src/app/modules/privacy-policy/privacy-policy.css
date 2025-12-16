@@ -1,33 +1,51 @@
+/* Privacy Page */
+.privacy-page {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: "MarkOT";
+  color: #333;
+}
+
 /* Page container */
 .privacy-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 147px 24px 60px 24px;
-  font-family: "MarkOT";
-  background-color: #f9f9f9;
-  color: #333;
+}
+
+/* Introduction/Header Section */
+.privacy-container > section:first-child {
+  background-color: #eaeaea;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
 }
 
 /* Page title */
 .privacy-container h1 {
+  font-family: "MarkOT";
   font-size: 42px;
-  font-weight: 300;
-  margin: 0 0 32px 0;
-  letter-spacing: 0.5px;
+  font-weight: 300 !important;
   color: #333;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.5px;
 }
 
-/* Section wrapper */
+/* Content sections wrapper */
 .privacy-container section {
-  background-color: #ffffff;
-  padding: 32px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  background-color: #eaeaea;
+  padding: 48px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.privacy-container section:last-child {
+  margin-bottom: 0;
 }
 
 /* Section heading */
 .privacy-container h2 {
+  font-family: "MarkOT";
   font-size: 18px;
   font-weight: 600;
   margin: 0 0 16px 0;
@@ -45,6 +63,19 @@
   white-space: pre-line;
 }
 
+.content strong {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Effective date styling */
+.privacy-container > section:first-child .content {
+  font-size: 14px;
+  color: #7c7c7c;
+}
+
+/* Responsive Design */
+
 /* Tablet */
 @media (max-width: 1024px) {
   .privacy-container {
@@ -53,6 +84,14 @@
 
   .privacy-container h1 {
     font-size: 36px;
+  }
+
+  .privacy-container section {
+    padding: 36px 24px;
+  }
+
+  .privacy-container h2 {
+    font-size: 16px;
   }
 }
 
@@ -64,20 +103,29 @@
 
   .privacy-container h1 {
     font-size: 28px;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
+  }
+
+  .privacy-container > section:first-child {
+    padding: 24px;
   }
 
   .privacy-container section {
-    padding: 24px;
+    padding: 24px 20px;
   }
 
   .privacy-container h2 {
     font-size: 15px;
+    margin-bottom: 12px;
   }
 
   .content {
     font-size: 14px;
     line-height: 1.7;
+  }
+
+  .privacy-container > section:first-child .content {
+    font-size: 13px;
   }
 }
 
@@ -87,11 +135,36 @@
     font-size: 24px;
   }
 
-  .privacy-container section {
+  .privacy-container > section:first-child {
     padding: 20px;
+  }
+
+  .privacy-container section {
+    padding: 20px 16px;
+  }
+
+  .privacy-container h2 {
+    font-size: 14px;
   }
 
   .content {
     font-size: 13px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .privacy-page {
+    background-color: white;
+  }
+
+  .privacy-container section {
+    box-shadow: none;
+    border: none;
+  }
+
+  .privacy-container h1,
+  .privacy-container h2 {
+    page-break-after: avoid;
   }
 }

@@ -4,18 +4,21 @@
     <div class="embla__slide">
       <div class="hero-slide">
         <img [src]="slide" alt="Hotel Slide" class="hero-bg" />
-        <div class="hero-content">
-          <h1>A Courtyard of Calm<br />Crafted for You</h1>
-        </div>
       </div>
     </div>
     }
   </div>
+
+  <div class="hero-content">
+    <h1>A Courtyard of Calm<br />Crafted for You</h1>
+  </div>
+  
   <button class="embla__prev" (click)="scrollPrev()" aria-label="Previous slide"> ‹</button>
   <button class="embla__next" (click)="scrollNext()" aria-label="Next slide"> ›</button>
 </div>
 
 <!-- ABOUT -->
+<div style="padding: 60px;">
 <section class="split">
   <img class="shadow-wrapper" src="assets/images/rooftop-side-view.jpg" />
   <div>
@@ -30,6 +33,7 @@
     <a class="header-explore-btn" (click)="scrollTo('rooms-list-section')">EXPLORE</a>
   </div>
 </section>
+</div>
 
 <section class="split-second">
   <div>
