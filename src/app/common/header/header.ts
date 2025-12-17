@@ -10,6 +10,8 @@ import { Router, RouterModule } from '@angular/router';
 export class Header {
 
   public isScrolled: boolean = false;
+  public isMenuOpen :boolean = false;
+
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
     this.isScrolled = window.scrollY > 50;

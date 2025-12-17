@@ -1,9 +1,9 @@
 <header class="home-header" [class.scrolled]="isScrolled">
     <nav class="nav-links">
       <a routerLink="/home">Home</a>
-      <a href="#">About</a>
-      <a href="#">Rooms</a>
-      <a href="#">Contact</a>
+      <a href="/about">About</a>
+      <a href="/rooms">Rooms</a>
+      <a href="/contact">Contact</a>
     </nav>
 
     <div class="logo">
@@ -14,3 +14,27 @@
       <a class="header-booking-btn">Book Now</a>
 </nav>
 </header>
+    </nav>
+</header>
+
+<!-- MOBILE HEADER -->
+<header class="mobile-header" [class.scrolled]="isScrolled">
+  <div class="mobile-logo">
+    <img (click)="routeToHome()" src="assets/images/final-logo.png" alt="First Courtyard" />
+  </div>
+
+  <div class="mobile-hamburger" (click)="isMenuOpen = !isMenuOpen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" [class.open]="isMenuOpen">
+  <a routerLink="/home" (click)="isMenuOpen = false">Home</a>
+  <a href="/about" (click)="isMenuOpen = false">About</a>
+  <a href="/rooms" (click)="isMenuOpen = false">Rooms</a>
+  <a href="/contact" (click)="isMenuOpen = false">Contact</a>
+  <a class="header-booking-btn" (click)="isMenuOpen = false">Book Now</a>
+</div>

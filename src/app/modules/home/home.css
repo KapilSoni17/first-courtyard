@@ -189,8 +189,10 @@ section {
 
 /* ================= SPLIT SECOND / PAAWANA RESTAURANT ================= */
 .split-second {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  flex-direction: row;
+  justify-content: space-between;
   gap: 100px;
   align-items: center;
   background-color: #F5F5F5;
@@ -342,8 +344,10 @@ section {
 }
 
 .rooms-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(3, 1fr); */
+  flex-direction: row;
+  justify-content: space-between;
   gap: 32px;
   margin-top: 20px;
 }
@@ -855,6 +859,8 @@ section {
 
   /* Split Second / Paawana Restaurant */
   .split-second {
+    display: flex;
+    flex-direction: column;
     padding: 40px 20px;
     gap: 24px;
   }
