@@ -1,4 +1,4 @@
-<header class="home-header" [class.scrolled]="isScrolled">
+<header class="home-header" [class.scrolled]="isScrolled || !isHomePage">
     <nav class="nav-links">
       <a routerLink="/home">Home</a>
       <a href="/about">About</a>
@@ -7,7 +7,7 @@
     </nav>
 
     <div class="logo">
-      <img (click)="routeToHome()" [src]="isScrolled ? 'assets/images/white-new-logo.png' : 'assets/images/black-new-logo.png'"
+      <img (click)="routeToHome()" [src]="(isScrolled || !isHomePage) ? 'assets/images/white-new-logo.png' : 'assets/images/black-new-logo.png'"
         alt="First Courtyard" />
     </div>
 
@@ -17,7 +17,7 @@
 </header>
 
 <!-- MOBILE HEADER -->
-<header class="mobile-header" [class.scrolled]="isScrolled">
+<header class="mobile-header" [class.scrolled]="isScrolled || !isHomePage">
   <div class="mobile-logo">
     <img (click)="routeToHome()" [src]="isScrolled ? 'assets/images/white-new-logo.png' : 'assets/images/black-new-logo.png'"
       alt="First Courtyard"/>

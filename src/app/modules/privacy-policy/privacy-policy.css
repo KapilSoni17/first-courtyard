@@ -4,7 +4,7 @@
 .privacy-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 147px 24px 60px 24px;
+  padding: 130px 80px 60px 80px;
 }
 
 /* Header / Intro Section */
@@ -91,7 +91,7 @@
 /* Tablet */
 @media (max-width: 1024px) {
   .privacy-container {
-    padding: 48px 24px;
+    padding: 100px 50px 50px 50px;
   }
 
   .privacy-container h1 {
@@ -99,7 +99,7 @@
   }
 
   .terms-sections {
-    padding: 36px 24px;
+    padding: 40px;
   }
 
   .section-title {
@@ -110,7 +110,7 @@
 /* Mobile */
 @media (max-width: 768px) {
   .privacy-container {
-    padding: 147px 20px 32px 20px;
+    padding: 50px 30px 40px 30px;
   }
 
   .privacy-container h1 {
@@ -122,7 +122,7 @@
   }
 
   .terms-sections {
-    padding: 24px 20px;
+    padding: 28px;
   }
 
   .term-section {
@@ -148,6 +148,10 @@
 
 /* Small Mobile */
 @media (max-width: 480px) {
+  .privacy-container {
+    padding: 30px 20px 35px 20px;
+  }
+
   .privacy-container h1 {
     font-size: 24px;
   }
@@ -157,7 +161,7 @@
   }
 
   .terms-sections {
-    padding: 20px 16px;
+    padding: 20px;
   }
 
   .section-title {
@@ -167,27 +171,5 @@
   .section-content,
   .content {
     font-size: 13px;
-  }
-}
-
-/* ================================
-   Print Styles
-================================ */
-
-@media print {
-
-  .privacy-container > section:first-child,
-  .terms-sections {
-    box-shadow: none;
-    border: none;
-  }
-
-  .privacy-container h1,
-  .section-title {
-    page-break-after: avoid;
-  }
-
-  .term-section {
-    page-break-inside: avoid;
   }
 }
