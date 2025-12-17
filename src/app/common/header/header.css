@@ -39,7 +39,7 @@
 .nav-links {
   display: flex;
   gap: 32px;
-  font-size: 14px;
+  font-size: 18px;
   align-items: center;
 }
 
@@ -75,7 +75,7 @@
 
   .nav-links {
     gap: 20px;
-    font-size: 13px;
+    font-size: 18px;
   }
 
   .logo img {
