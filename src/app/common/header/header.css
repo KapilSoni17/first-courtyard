@@ -52,9 +52,6 @@
 }
 
 .logo {
-  font-family: var(--primary-font);
-  font-size: 18px;
-  letter-spacing: 1px;
   text-align: center;
   display: flex;
   justify-content: center;

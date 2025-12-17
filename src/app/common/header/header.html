@@ -7,20 +7,20 @@
     </nav>
 
     <div class="logo">
-      <img (click)="routeToHome()" src="assets/images/final-logo.png" alt="First Courtyard" />
+      <img (click)="routeToHome()" [src]="isScrolled ? 'assets/images/final-logo.png' : 'assets/images/white-logo.png'"
+        alt="First Courtyard" />
     </div>
 
     <nav class="nav-links">
       <a class="header-booking-btn">Book Now</a>
-</nav>
-</header>
     </nav>
 </header>
 
 <!-- MOBILE HEADER -->
 <header class="mobile-header" [class.scrolled]="isScrolled">
   <div class="mobile-logo">
-    <img (click)="routeToHome()" src="assets/images/final-logo.png" alt="First Courtyard" />
+    <img (click)="routeToHome()" [src]="isScrolled ? 'assets/images/final-logo.png' : 'assets/images/white-logo.png'"
+      alt="First Courtyard"/>
   </div>
 
   <div class="mobile-hamburger" (click)="isMenuOpen = !isMenuOpen">
