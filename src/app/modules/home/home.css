@@ -56,7 +56,6 @@ a {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
   padding: 32px 48px;
-  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -346,7 +345,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .room-card {
@@ -432,9 +431,6 @@ section {
 .full-image {
   background: url('../../../assets/images/mandawa-kothi.png') center/cover no-repeat;
   height: 520px;
-  width: 1160px;
-  margin-left: 4rem;
-  display: flex;
   align-items: center;
   justify-content: center;
   color: white;

@@ -85,7 +85,7 @@ Whether you're staying at the property or visiting for a quiet meal, Paawana Res
 
   public serviceOptions = {
     loop: true,
-    slidesToScroll: 2,
+    slidesToScroll: this.isDesktop ? 2 : 1,
   };
 
   services: Service[] = [
