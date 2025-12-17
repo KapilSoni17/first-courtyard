@@ -1,7 +1,7 @@
 <header class="home-header" [class.scrolled]="isScrolled || !isHomePage">
     <nav class="nav-links">
       <a routerLink="/home">Home</a>
-      <a href="/about">About</a>
+      <a href="/about-us">About</a>
       <a href="/rooms">Rooms</a>
       <a href="/contact">Contact</a>
     </nav>
@@ -33,7 +33,7 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" [class.open]="isMenuOpen">
   <a routerLink="/home" (click)="isMenuOpen = false">Home</a>
-  <a href="/about" (click)="isMenuOpen = false">About</a>
+  <a href="/about-us" (click)="isMenuOpen = false">About</a>
   <a href="/rooms" (click)="isMenuOpen = false">Rooms</a>
   <a href="/contact" (click)="isMenuOpen = false">Contact</a>
   <a class="header-booking-btn" (click)="isMenuOpen = false">Book Now</a>
