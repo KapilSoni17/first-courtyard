@@ -53,10 +53,11 @@ a {
 }
 
 .hero-content h1 {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
   padding: 25px 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .hero-content h1,
