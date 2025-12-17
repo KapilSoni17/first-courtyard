@@ -5,12 +5,16 @@
       <strong>Effective From:</strong> {{ effectiveDate }}
     </p>
   </section>
-  @for (section of sections; track $index) {
-      <section>
-        <h2>{{ section.title }}</h2>
-        <p class="content">
-          {{ section.content.trim() }}
-        </p>
-      </section>
-  }
+     <div class="terms-sections">
+      @for (section of sections; track $index) {
+        <div class="term-section">
+          <h2 class="section-title">{{ section.title }}</h2>
+          
+          @if (section.content) {
+            <p class="section-content">{{ section.content.trim() }}</p>
+          }
+          
+        </div>
+      }
+    </div>
 </div>

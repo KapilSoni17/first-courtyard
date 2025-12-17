@@ -1,50 +1,58 @@
-/* Privacy Page */
-.privacy-page {
-  min-height: 100vh;
-  background-color: #f9f9f9;
-  font-family: "MarkOT";
-  color: #333;
-}
 
-/* Page container */
+
+/* Container */
 .privacy-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 147px 24px 60px 24px;
 }
 
-/* Introduction/Header Section */
+/* Header / Intro Section */
 .privacy-container > section:first-child {
   background-color: #eaeaea;
   padding: 32px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Page title */
+/* Page Title */
 .privacy-container h1 {
   font-family: "MarkOT";
   font-size: 42px;
-  font-weight: 300 !important;
+  font-weight: 300;
   color: #333;
   margin: 0 0 12px 0;
   letter-spacing: 0.5px;
 }
 
-/* Content sections wrapper */
-.privacy-container section {
+/* Effective Date */
+.privacy-container > section:first-child .content {
+  font-size: 14px;
+  color: #7c7c7c;
+}
+
+/* Sections Wrapper */
+.terms-sections {
   background-color: #eaeaea;
   padding: 48px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
 }
 
-.privacy-container section:last-child {
+/* Individual Section */
+.term-section {
+  margin-bottom: 48px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.term-section:last-child {
   margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
-/* Section heading */
-.privacy-container h2 {
+/* Section Title */
+.section-title {
   font-family: "MarkOT";
   font-size: 18px;
   font-weight: 600;
@@ -54,7 +62,16 @@
   color: #333;
 }
 
-/* Section content */
+/* Section Content */
+.section-content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* Generic Content */
 .content {
   font-size: 15px;
   line-height: 1.8;
@@ -64,17 +81,12 @@
 }
 
 .content strong {
-  color: #333;
   font-weight: 600;
 }
 
-/* Effective date styling */
-.privacy-container > section:first-child .content {
-  font-size: 14px;
-  color: #7c7c7c;
-}
-
-/* Responsive Design */
+/* ================================
+   Responsive Styles
+================================ */
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -86,11 +98,11 @@
     font-size: 36px;
   }
 
-  .privacy-container section {
+  .terms-sections {
     padding: 36px 24px;
   }
 
-  .privacy-container h2 {
+  .section-title {
     font-size: 16px;
   }
 }
@@ -103,22 +115,27 @@
 
   .privacy-container h1 {
     font-size: 28px;
-    margin-bottom: 12px;
   }
 
   .privacy-container > section:first-child {
     padding: 24px;
   }
 
-  .privacy-container section {
+  .terms-sections {
     padding: 24px 20px;
   }
 
-  .privacy-container h2 {
+  .term-section {
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+  }
+
+  .section-title {
     font-size: 15px;
     margin-bottom: 12px;
   }
 
+  .section-content,
   .content {
     font-size: 14px;
     line-height: 1.7;
@@ -139,32 +156,38 @@
     padding: 20px;
   }
 
-  .privacy-container section {
+  .terms-sections {
     padding: 20px 16px;
   }
 
-  .privacy-container h2 {
+  .section-title {
     font-size: 14px;
   }
 
+  .section-content,
   .content {
     font-size: 13px;
   }
 }
 
-/* Print Styles */
-@media print {
-  .privacy-page {
-    background-color: white;
-  }
+/* ================================
+   Print Styles
+================================ */
 
-  .privacy-container section {
+@media print {
+
+  .privacy-container > section:first-child,
+  .terms-sections {
     box-shadow: none;
     border: none;
   }
 
   .privacy-container h1,
-  .privacy-container h2 {
+  .section-title {
     page-break-after: avoid;
+  }
+
+  .term-section {
+    page-break-inside: avoid;
   }
 }
