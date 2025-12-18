@@ -67,98 +67,61 @@
 
 .mandawa-banner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 520px;
-  width: 100%;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 64px;
+  padding: 80px;
+  align-items: start; /* IMPORTANT */
+  /* min-height: 520px;    Controls image height */
 }
 
-/* LEFT PANEL */
-.mandawa-left{
-  width: 50%;
-  object-fit: cover;
-}
-.mandawa-left img{
-  /* position: relative; */
-  /* display: flex; */
-  align-items: center;
-  width: 720px;
-  /* justify-content: center; */
-}
 
-/* RIGHT PANEL */
-.mandawa-right {
-  background: url('../../../assets/images/first-courtyard-evening.png') center/cover no-repeat;
-  position: relative;
+
+.mandawa-left {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* width: 50%; */
-  /* width: 700px; */
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Dark overlay */
-.mandawa-right::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
+
+.info-box {
+  border: 1px solid #e5e5e5;
+  padding: 24px 28px;
+  background: #ffffff;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.06),
+    0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-/* Contact card */
-.contact-card {
-  position: relative;
-  z-index: 2;
-  color: #ffffff;
-  max-width: 320px;
-  text-align: end;
-  line-height: 0.8;
 
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  padding: 32px 48px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
 
-.contact-card h4 {
-  font-size: 18px;
-  /* margin-bottom: 20px; */
-  font-weight: 400;
-  
-}
-
-.contact-phone {
-  font-size: 24px;
-  /* margin-bottom: 12px; */
-}
-
-.contact-link {
-  display: inline-block;
-  /* margin-bottom: 16px; */
-  font-size: 18px;
-  text-decoration: underline;
-  color: #ffffff;
-}
-
-.contact-email {
-  font-size: 24px;
-  /* margin-bottom: 24px; */
-  opacity: 0.9;
-  font-weight: 400;
-}
-
-.contact-address span {
-  display: block;
-  font-size: 18px;
-  /* margin-bottom: 6px; */
-  opacity: 0.8;
-}
-
-.contact-address p {
+.info-box h4 {
   font-size: 16px;
-  line-height: 1;
-  opacity: 0.8;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
+
+.info-box p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.mandawa-right {
+  height: 100%;
+}
+
+.mandawa-right img {
+  width: 100%;
+  height: 100%;       /* 🔑 match left height */
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+
 
 
 /* ================= MAP CONTAINER ================= */
@@ -167,3 +130,15 @@
 /* min-height: 520px; */
   /* margin-top: 40px; */
 }
+
+@media (max-width: 768px) {
+  .mandawa-banner {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .mandawa-right img {
+    height: 260px; /* controlled mobile image height */
+  }
+}
+
