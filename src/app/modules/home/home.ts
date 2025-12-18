@@ -25,9 +25,9 @@ export class Home {
   public servicePlugins = [Autoplay({ delay: 3000, stopOnInteraction: true })];
 
   slides: string[] = [
-    'assets/images/landing-slider1.png',
-    'assets/images/landing-slider2.png',
-    'assets/images/landing-slider3.png'
+    'assets/images/slider1.webp',
+    'assets/images/slider2.webp',
+    'assets/images/slider3.webp'
   ];
 
   // Text expansion states
