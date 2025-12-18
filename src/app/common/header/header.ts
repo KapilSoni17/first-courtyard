@@ -4,14 +4,14 @@ import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
-  imports: [ RouterModule ],
+  imports: [RouterModule],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
 export class Header {
 
   public isScrolled: boolean = false;
-  public isMenuOpen :boolean = false;
+  public isMenuOpen: boolean = false;
   public isHomePage: boolean = false;
 
   @HostListener('window:scroll', [])
@@ -21,11 +21,11 @@ export class Header {
 
   private route = inject(Router);
 
-  public routeToHome():void{
+  public routeToHome(): void {
     this.route.navigate(["/"]);
   }
 
-constructor(private router: Router) {
+  constructor(private router: Router) {
     this.router.events.pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         this.isHomePage = event.urlAfterRedirects === '/' || event.urlAfterRedirects === '';
@@ -33,4 +33,7 @@ constructor(private router: Router) {
       });
   }
 
+  public routeTo(route: string): void {
+    this.router.navigate([route]);
+  }
 }
