@@ -1,6 +1,6 @@
 /* ================= Contact HERO ================= */
 .contact_hero {
-  height: 100vh;
+  height: 50vh;
   position: relative;
   overflow: hidden;
 }
@@ -26,10 +26,7 @@
 }
 
 .contact-hero-content h1 {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
   padding: 32px 48px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .contact-hero-content h1,
