@@ -90,7 +90,7 @@
 }
 
 .mobile-logo img {
-  width: 72px;
+  width: 93px;
 }
 
 .mobile-hamburger {
@@ -221,8 +221,8 @@
   }
   .mobile-logo img {
     display: block !important;
-    width: 72px;
-    height: auto;
+    width: 93px;
+    height: 48px;
   }
 }
 
