@@ -825,7 +825,7 @@ section {
 @media (max-width: 480px) {
 
   .embla__prev, .embla__next{
-    top: 90%;
+    top: 80%;
   }
   
   .services-carousel .embla__prev,
@@ -833,7 +833,7 @@ section {
     width: 40px;
     height: 40px;
     font-size: 22px;
-    top: 90%;
+    top: 80%;
   }
 
   /* General Section Padding */
