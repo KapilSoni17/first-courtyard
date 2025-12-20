@@ -1,6 +1,6 @@
 /* ================= Contact HERO ================= */
 .contact_hero {
-  /* height: 50vh; */
+  height: 50vh;
   position: relative;
   overflow: hidden;
 }
@@ -134,8 +134,19 @@
     padding: 40px 20px;
   }
 
+  .contact_hero {
+  height: auto;
+}
+
+
   .mandawa-right img {
     height: 260px; /* controlled mobile image height */
   }
 }
 
+
+@media (max-width: 480px) {
+  .contact_hero {
+  height: auto;
+}
+}
