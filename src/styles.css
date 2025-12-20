@@ -9,3 +9,10 @@
           text-decoration: none;
           color: inherit;
         }
+
+@font-face {
+  font-family: 'Madelyn';
+  src: url('assets/fonts/madelyn/MadelynFill-Trial-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

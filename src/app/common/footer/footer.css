@@ -1,7 +1,7 @@
 /* ================= FOOTER ================= */
 .lux-footer {
   position: relative;
-  background: url('../../../assets/images/bird-view.jpg') center/cover no-repeat;
+  background: url('../../../assets/images/header-common-img.png') center/cover no-repeat;
   color: #ffffff;
   padding: 100px 80px 40px;
   overflow: hidden;
@@ -211,4 +211,8 @@
   .footer-center p {
     font-size: 13px;
   }
+}
+
+.cursor-ponter{
+  cursor: pointer;
 }
