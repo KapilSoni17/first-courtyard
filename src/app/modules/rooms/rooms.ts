@@ -15,7 +15,8 @@ rooms: Room[] = [
       description: `Designed for comfort and calm, the Courtyard Double Room offers a peaceful stay infused with the charm of Mandawa's heritage. Thoughtfully furnished with beautiful vintage pieces from the region, the room reflects timeless Rajasthani elegance. Clean, spacious, and welcoming, it is ideal for couples or solo travelers seeking a cozy retreat after a day of exploration.`,
       bedrooms: 1,
       area: '24 sq. m',
-      price: 5000
+      price: 5000,
+      occupancy: 2
     },
     {
       id: 2,
@@ -24,7 +25,8 @@ rooms: Room[] = [
       description: `The Heritage Twin Room blends practicality with old-world charm. Featuring two comfortable separate beds, this room is perfect for friends or companions traveling together. Soft lighting, handcrafted vintage furniture, and a soothing ambiance create a warm and restful environment while preserving the authentic character of this historic town.`,
       bedrooms: 2,
       area: '24 sq. m',
-      price: 5000
+      price: 5000,
+      occupancy: 2
     },
     {
       id: 3,
@@ -33,7 +35,8 @@ rooms: Room[] = [
       description: `Spacious, elegant, and thoughtfully designed, the Family Courtyard Suite is perfect for families or small groups. With two comfortable double beds and ample space to relax, the room combines modern comfort with traditional vintage furniture sourced from the region. Its warm interiors and refined details make it feel like a home rooted in heritage`,
       bedrooms: 2,
       area: '64 sq. m',
-      price: 8000
+      price: 8000,
+      occupancy: 4
     }
   ];
 
@@ -50,4 +53,5 @@ interface Room {
   bedrooms: number;
   area: string;
   price: number;
+  occupancy: number;
 }

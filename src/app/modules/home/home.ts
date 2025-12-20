@@ -150,7 +150,8 @@ Paawana is not just about food—it's about the experience. Guests often find th
       image: 'assets/images/delux-room.png',
       bedrooms: 1,
       area: '24 sq. m',
-      price: 5000
+      price: 5000,
+      occupancy: 2
     },
     {
       name: 'Heritage Twin Room',
@@ -158,7 +159,8 @@ Paawana is not just about food—it's about the experience. Guests often find th
       image: 'assets/images/twin-room.png',
       bedrooms: 2,
       area: '21 sq. m',
-      price: 5000
+      price: 5000,
+      occupancy: 2
     },
     {
       name: 'Family Courtyard Suite',
@@ -166,7 +168,8 @@ Paawana is not just about food—it's about the experience. Guests often find th
       image: 'assets/images/family-room.png',
       bedrooms: 2,
       area: '64 sq. m',
-      price: 7000
+      price: 7000,
+      occupancy: 4
     }
   ];
 
@@ -196,6 +199,7 @@ export interface Room {
   bedrooms: number;
   area: string;
   price: number;
+  occupancy: number;
 }
 
 export interface Service {

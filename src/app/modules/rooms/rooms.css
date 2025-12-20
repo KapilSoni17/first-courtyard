@@ -144,7 +144,7 @@
 
 .room-meta {
   display: flex;
-  gap: 18px;
+  gap: 42px;
   margin-bottom: 10px;
 }
 
@@ -210,8 +210,8 @@
   padding: 20px 20px;
 }
   .room-meta {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    gap: 52px;
   }
 
   .room-footer {
@@ -236,7 +236,7 @@
 
   .room-meta {
     flex-direction: row;
-    gap: 12px;
+    gap: 42px;
   }
 
   .rooms_hero {
