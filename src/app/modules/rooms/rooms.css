@@ -1,6 +1,6 @@
 /* ================= rooms HERO ================= */
 .rooms_hero {
-  height: 50vh;
+  /* height: 50vh; */
   position: relative;
   overflow: hidden;
 }
@@ -215,6 +215,9 @@
     height: 240px;
   }
 
+  .rooms-section {
+  padding: 20px 20px;
+}
   .room-meta {
     flex-direction: column;
     gap: 12px;
@@ -236,6 +239,9 @@
   .room-image img {
     height: 240px;
   }
+   .rooms-section {
+  padding: 20px 20px;
+}
 
   .room-meta {
     flex-direction: row;
