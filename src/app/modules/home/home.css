@@ -154,6 +154,11 @@ section {
 }
 
 /* ================= SPLIT / ABOUT SECTION ================= */
+
+.split-wrapper{
+  padding: 60px;
+}
+
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -545,6 +550,10 @@ section {
     padding: 80px 40px;
   }
 
+  .split-wrapper{
+  padding: 60px;
+}
+
   .split img {
     width: 100%;
     height: auto;
@@ -699,6 +708,10 @@ section {
     gap: 32px;
   }
 
+  .split-wrapper{
+  padding: 32px;
+}
+
   .split img {
     max-height: 300px;
   }
@@ -852,6 +865,10 @@ section {
     padding: 40px 20px;
     gap: 24px;
   }
+
+    .split-wrapper{
+  padding: 32px;
+}
 
   .hero-content h1 {
     padding: 20px 16px;
