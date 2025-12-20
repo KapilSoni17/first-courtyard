@@ -5,7 +5,7 @@
     </div>
 
     <div class="rooms_hero_content">
-        <h1>Our Rooms</h1>
+        <h1 style="font-family: 'Madelyn'; font-size: 75px;">Our Rooms</h1>
     </div>
 </div>
 
@@ -20,191 +20,41 @@
         </div>
 
         <!-- Room Card -->
+        @for (room of rooms; track $index) {
         <div class="room-card">
             <div class="room-image">
-                <img src="assets/images/delux-room.png" alt="Villa du Gouverneur">
+                <img [src]="room.image" [alt]="room.title" />
             </div>
 
             <div class="room-content">
-                <h3>Villa du Gouverneur</h3>
+                <h3>{{ room.title }}</h3>
 
                 <p class="room-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
+                    {{ room.description }}
                 </p>
+
                 <div class="room-meta">
                     <div class="meta-item">
                         <div>
                             <span>Bedrooms</span>
                             <i class="fa-solid fa-bed"></i>
-                            <strong>2</strong>
+                            <strong style="margin-left: 5px;">{{ room.bedrooms }}</strong>
                         </div>
                     </div>
 
                     <div class="meta-item">
                         <div>
-                            <span>Bathrooms</span>
-                            <i class="fa-solid fa-bath"></i>
-                            <strong>2</strong>
-                        </div>
-                    </div>
-
-                    <div class="meta-item">
-                        <div>
-                            <span>Area</span>
-                            <i class="fa-solid fa-ruler-combined"></i>
-                            <strong>110 sq. m</strong>
+                            <span>Area</span> ⬚ <strong>{{ room.area }}</strong>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="room-price">₹8000 <span>/ night</span></div>
+                <div class="room-price">₹{{ room.price }}<span>/night</span></div>
                 <div class="room-footer">
-                    <button class="room-book-btn">BOOK</button>
+                    <button class="room-book-btn" (click)="onBook(room.id)">BOOK</button>
                 </div>
             </div>
         </div>
-         <div class="room-card">
-            <div class="room-image">
-                <img src="assets/images/delux-room.png" alt="Villa du Gouverneur">
-            </div>
-
-            <div class="room-content">
-                <h3>Villa du Gouverneur</h3>
-
-                <p class="room-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                </p>
-                <div class="room-meta">
-                    <div class="meta-item">
-                        <div>
-                            <span>Bedrooms</span>
-                            <i class="fa-solid fa-bed"></i>
-                            <strong>2</strong>
-                        </div>
-                    </div>
-
-                    <div class="meta-item">
-                        <div>
-                            <span>Bathrooms</span>
-                            <i class="fa-solid fa-bath"></i>
-                            <strong>2</strong>
-                        </div>
-                    </div>
-
-                    <div class="meta-item">
-                        <div>
-                            <span>Area</span>
-                            <i class="fa-solid fa-ruler-combined"></i>
-                            <strong>110 sq. m</strong>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="room-price">₹8000 <span>/ night</span></div>
-                <div class="room-footer">
-                    <button class="room-book-btn">BOOK</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="room-card">
-            <div class="room-image">
-                <img src="assets/images/delux-room.png" alt="Villa du Gouverneur">
-            </div>
-
-            <div class="room-content">
-                <h3>Villa du Gouverneur</h3>
-
-                <p class="room-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel sodales tortor.
-                    Curabitur felis sapien, facilisis id magna vel, fermentum ultricies libero.
-                </p>
-                <div class="room-meta">
-                    <div class="meta-item">
-                        <div>
-                            <span>Bedrooms</span>
-                            <i class="fa-solid fa-bed"></i>
-                            <strong>2</strong>
-                        </div>
-                    </div>
-
-                    <div class="meta-item">
-                        <div>
-                            <span>Bathrooms</span>
-                            <i class="fa-solid fa-bath"></i>
-                            <strong>2</strong>
-                        </div>
-                    </div>
-
-                    <div class="meta-item">
-                        <div>
-                            <span>Area</span>
-                            <i class="fa-solid fa-ruler-combined"></i>
-                            <strong>110 sq. m</strong>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="room-price">₹8000 <span>/ night</span></div>
-                <div class="room-footer">
-                    <button class="room-book-btn">BOOK</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Duplicate .room-card for more rooms -->
+        }
     </section>
-
-
-</div>
-
-<div class="map-container">
-    <!-- <h3>Map container</h3> -->
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps?q=First+Courtyard+Mandwa&output=embed" width="100%" height="450"
-            style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-
 </div>

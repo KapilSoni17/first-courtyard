@@ -26,6 +26,7 @@
 }
 
 .contact-hero-content h1 {
+  font-family: 'Madelyn';
   padding: 32px 48px;
 }
 
@@ -113,19 +114,13 @@
   height: 100%;       /* 🔑 match left height */
   object-fit: cover;
   display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-
-
-
-
-
 
 /* ================= MAP CONTAINER ================= */
 .map-container {
-  width: 100%;
-/* min-height: 520px; */
-  /* margin-top: 40px; */
+  padding: 0px 80px 40px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
@@ -138,12 +133,11 @@
   height: auto;
 }
 
-
   .mandawa-right img {
     height: 260px; /* controlled mobile image height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
 }
-
 
 @media (max-width: 480px) {
   .contact_hero {

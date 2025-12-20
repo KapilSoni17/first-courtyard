@@ -27,7 +27,6 @@
       <span class="read-more-link" (click)="toggleAboutText()">Read More</span>
       }
     </p>
-
     <a class="header-explore-btn" (click)="scrollTo('rooms-list-section')">EXPLORE</a>
   </div>
 </section>
@@ -95,7 +94,7 @@
       <div class="room-meta">
         <div class="meta-item">
           <span class="meta-label">Bedrooms</span>
-          <span class="meta-value"> <p style="font-size: 25px;">🛏</p> <p>{{ room.bedrooms }}</p></span>
+          <span class="meta-value" style="align-items: baseline;"><i class="fa-solid fa-bed"></i> <p>{{ room.bedrooms }}</p></span>
         </div>
 
         <div class="meta-item">
@@ -105,7 +104,7 @@
       </div>
 
       <div class="price">
-        <span>₹{{ room.price }}<small>/night</small></span>
+        <span>₹{{ room.price }}<small style="font-size: 13px; color: #777;">/night</small></span>
         <button class="book-room-btn">BOOK</button>
       </div>
     </div>

@@ -19,10 +19,8 @@
 }
 
 .rooms-hero_content h1 {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
+  font-family: 'Madelyn';
   padding: 32px 48px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .rooms-hero_content h1,
@@ -87,7 +85,6 @@
   min-width: 320px;
   margin: 0 auto 24px auto;
   border: 1px solid #e0e0e0;
-  border-radius: 18px;
   background: #fff;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   padding: 12px;
@@ -106,7 +103,6 @@
   /* height: 180px; */
   /* width: 220px; */
   overflow: hidden;
-  border-radius: 14px;
   /* background: #f7f7f7; */
   padding: 20px;
   margin-right: 18px;
@@ -117,7 +113,6 @@
   /* max-width: 220px; */
   /* max-height: 180px; */
   object-fit: cover;
-  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: transform 0.2s;
 }
@@ -141,7 +136,7 @@
 }
 
 .room-desc {
-  font-size: 13px;
+  font-size: 14px;
   color: #555;
   line-height: 1.5;
   margin-bottom: 10px;
@@ -178,7 +173,6 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 0;
-  color: #1a7f4c;
 }
 
 .room-price span {
@@ -187,22 +181,18 @@
 }
 
 .room-book-btn {
-   background: linear-gradient(90deg, #333333 60%, #333333 100%);
+  background: #333;
   color: #fff;
-  border: none;
+  border: 1px solid #333;
   padding: 10px 22px;
-  font-size: 13px;
+  font-size: 14px;
   width: 100%;
   letter-spacing: 1px;
-  border-radius: 8px;
   cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 2px 6px rgba(26,127,76,0.08);
-  transition: background 0.2s, box-shadow 0.2s;
 }
 .room-book-btn:hover {
-  background: linear-gradient(90deg, #4e52519a 60%, #6e7371a9 100%);
-  box-shadow: 0 4px 16px rgba(26,127,76,0.13);
+  color: #2e2e2e !important;
+  background-color: #f5f5f5;
 }
 
 

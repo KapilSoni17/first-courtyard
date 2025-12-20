@@ -37,6 +37,7 @@
 }
 
 .nav-links {
+  cursor: pointer;
   display: flex;
   gap: 32px;
   font-size: 18px;
@@ -143,6 +144,7 @@
 
  
   .nav-links {
+    cursor: pointer;
     gap: 20px;
     font-size: 18px;
   }
@@ -162,6 +164,7 @@
   }
 
   .nav-links {
+    cursor: pointer;
     flex-wrap: wrap;
     justify-content: center !important;
     gap: 16px;
