@@ -945,7 +945,7 @@ section {
 
   .heritage-split-second img {
     max-height: 250px;
-    width: auto;
+    width: -webkit-fill-available;
   }
 
   .heritage-split-second .section-title {
