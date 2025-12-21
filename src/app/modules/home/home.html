@@ -132,8 +132,10 @@
 <section class="heritage-split-second">
   <div class="heritage-text-container">
     <h2 class="section-title">Discover Our Heritage Retreat</h2>
-    <p class="section-text">Step into the timeless elegance of Mandawa Kothi, our heritage residence where history and
-      hospitality come together.
+    <p class="section-text" [style.text-align]="'justify'" [style.line-height]="'30px'">{{ mandawaKothiText }}
+      @if (!isDesktop && !showFullMandawaKothiText) {
+      <span class="read-more-link" (click)="toggleMandawaKothiText()">Read More</span>
+      }
     </p>
     <div style="margin-top: 15px;">
     <a class="header-explore-btn" href="https://www.mandawakothi.com/" target="_blank">EXPLORE</a>

@@ -34,6 +34,7 @@ export class Home {
   public isDesktop: boolean = window.innerWidth > 1024;
   public showFullAboutText: boolean = this.isDesktop;
   public showFullPaawanaText: boolean = this.isDesktop;
+  public showFullMandawaKothiText: boolean = this.isDesktop;
 
   // Full text content
   public aboutFullText = `First Courtyard is a blend of heritage modern design hotel in Mandawa, Rajasthan, offering a comfortable and authentic stay in the heart of the historic town. Built around a traditional courtyard, the hotel beautifully blends heritage architecture with modern comfort. The rooms are clean, spacious, and thoughtfully designed, featuring handcrafted vintage furniture from the Shekhawati region that reflects the cultural richness of Mandawa. Ideal for couples, families, and cultural travellers, the hotel provides a peaceful atmosphere with personalised hospitality.
@@ -49,20 +50,31 @@ Paawana is not just about food—it's about the experience. Guests often find th
 
   public paawanaShortText = `Paawana Restaurant at First Courtyard is a place where good food, calm surroundings, and warm hospitality come together naturally. Designed to feel inviting and unhurried, Paawana is ideal for guests who enjoy meaningful meals in a relaxed setting...`;
 
+  public mandawaKothiFullDesc: string = `Mandawa Kothi is a heritage boutique property where history, culture, and quiet comfort come together effortlessly. Located in the heart of the historic town of Mandawa, this beautifully restored haveli offers guests an authentic experience rooted in the rich legacy of Rajasthan's Shekhawati region.
+
+The property reflects timeless heritage charm through its traditional architecture, artistic details, and thoughtfully designed spaces. With elegant interiors, soft lighting, and a peaceful ambiance, Mandawa Kothi provides a setting that feels both welcoming and deeply connected to its past. Each room is uniquely styled, blending classic design elements with modern comforts to ensure a relaxed and memorable stay.
+
+Guests can enjoy slow mornings, serene evenings, and moments of stillness that invite them to unwind and reconnect. The experience is enriched by warm hospitality and personalized service, creating an atmosphere where visitors feel cared for without being overwhelmed.
+
+Beyond its walls, Mandawa Kothi offers easy access to the town's famous fresco-painted havelis and heritage streets, allowing guests to explore local culture at an unhurried pace. More than just a place to stay, Mandawa Kothi is a destination that encourages travelers to pause, reflect, and experience the enduring spirit of Rajasthan in a truly meaningful way.`
+
+  public mandawaKothiShortDesc: string = `Mandawa Kothi is a heritage boutique property where history, culture, and quiet comfort come together effortlessly. Located in the heart of the historic town of Mandawa, this beautifully restored haveli offers guests an authentic experience rooted in the rich legacy of Rajasthan's Shekhawati region.
+
+The property reflects timeless heritage charm through its traditional architecture...`
   constructor() {
     effect(() => {
       this.heroEmblaApi = this.heroEmblaRef()?.emblaApi;
       this.serviceEmblaApi = this.serviceEmblaRef()?.emblaApi;
     });
   }
-  
+
   public scrollPrev(): void {
-      this.heroEmblaRef()?.scrollPrev();
-    }
-  
+    this.heroEmblaRef()?.scrollPrev();
+  }
+
   public scrollNext(): void {
-      this.heroEmblaRef()?.scrollNext();
-    }
+    this.heroEmblaRef()?.scrollNext();
+  }
 
   @HostListener('window:resize', [])
   onResize(): void {
@@ -117,17 +129,17 @@ Paawana is not just about food—it's about the experience. Guests often find th
     }
   ];
 
-  
+
   public scrollServicePrev(): void {
     this.serviceEmblaRef()?.scrollPrev();
-    
+
   }
-  
+
   public scrollServiceNext(): void {
     this.serviceEmblaRef()?.scrollNext();
   }
 
-  
+
   public scrollTo(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (!element) return;
@@ -135,14 +147,14 @@ Paawana is not just about food—it's about the experience. Guests often find th
     const headerOffset = 100;
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition =
-    elementPosition + window.pageYOffset - headerOffset;
-    
+      elementPosition + window.pageYOffset - headerOffset;
+
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'
     });
   }
-  
+
   rooms: Room[] = [
     {
       name: 'Courtyard Double Room',
@@ -177,9 +189,13 @@ Paawana is not just about food—it's about the experience. Guests often find th
   public toggleAboutText(): void {
     this.showFullAboutText = true;
   }
-  
+
   public togglePaawanaText(): void {
     this.showFullPaawanaText = true;
+  }
+
+  public toggleMandawaKothiText(): void {
+    this.showFullMandawaKothiText = true;
   }
 
   // Get current text based on state
@@ -189,6 +205,10 @@ Paawana is not just about food—it's about the experience. Guests often find th
 
   public get paawanaText(): string {
     return this.showFullPaawanaText ? this.paawanaFullText : this.paawanaShortText;
+  }
+
+  public get mandawaKothiText(): string {
+    return this.showFullMandawaKothiText ? this.mandawaKothiFullDesc : this.mandawaKothiShortDesc;
   }
 }
 
