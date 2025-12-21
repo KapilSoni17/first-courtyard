@@ -4,7 +4,7 @@
 .privacy-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 130px 80px 60px 80px;
+  padding: 40px 80px 60px 80px;
 }
 
 /* Header / Intro Section */
@@ -91,7 +91,7 @@
 /* Tablet */
 @media (max-width: 1024px) {
   .privacy-container {
-    padding: 100px 50px 50px 50px;
+    padding: 0px 50px 50px 50px;
   }
 
   .privacy-container h1 {
@@ -172,4 +172,66 @@
   .content {
     font-size: 13px;
   }
+}
+
+/* ================= Contact HERO ================= */
+.contact_hero {
+  height: 46vh;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.contact-hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  pointer-events: none;
+}
+
+.contact-hero-content h1 {
+  font-family: 'Madelyn';
+  padding: 32px 48px;
+}
+
+.contact-hero-content h1,
+.contact-hero-content a {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.contact-hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact_hero h1 {
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  z-index: 4;
+  margin-bottom: 24px;
+}
+
+.contact_hero_container {
+  display: flex;
+}
+
+
+@media (max-width: 768px) {
+  .contact_hero {
+  height: auto;
+}
+}
+
+@media (max-width: 480px) {
+  .contact_hero {
+  height: auto;
+}
 }
