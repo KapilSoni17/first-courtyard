@@ -15,6 +15,10 @@ export class PrivacyPolicy {
   effectiveDate: string = 'October 2025';
   sections: PrivacySection[] = [
     {
+      title: `Effective From: ${this.effectiveDate}`,
+      content: ``
+    },
+    {
       title: 'Information We Collect',
       content: `
         We collect personal information that you voluntarily provide when making a booking or contacting us, such as your name, email address, phone number, and address. We may also collect basic usage information such as IP address, browser type, and pages visited on our website.

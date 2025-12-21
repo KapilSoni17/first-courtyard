@@ -25,14 +25,9 @@
   letter-spacing: 0.5px;
 }
 
-/* Effective Date */
-.privacy-container > section:first-child .content {
-  font-size: 14px;
-  color: #7c7c7c;
-}
-
 /* Sections Wrapper */
 .terms-sections {
+  text-align: justify;
   background-color: #eaeaea;
   padding: 48px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -69,19 +64,6 @@
   color: #333;
   margin: 0;
   white-space: pre-line;
-}
-
-/* Generic Content */
-.content {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #333;
-  margin: 0;
-  white-space: pre-line;
-}
-
-.content strong {
-  font-weight: 600;
 }
 
 /* ================================
@@ -135,14 +117,9 @@
     margin-bottom: 12px;
   }
 
-  .section-content,
-  .content {
+  .section-content {
     font-size: 14px;
     line-height: 1.7;
-  }
-
-  .privacy-container > section:first-child .content {
-    font-size: 13px;
   }
 }
 
@@ -168,8 +145,7 @@
     font-size: 14px;
   }
 
-  .section-content,
-  .content {
+  .section-content {
     font-size: 13px;
   }
 }
