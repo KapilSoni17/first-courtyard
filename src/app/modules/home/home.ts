@@ -170,7 +170,7 @@ The property reflects timeless heritage charm through its traditional architectu
       description: `The Heritage Twin Room blends practicality with old-world charm. Featuring two comfortable separate beds, this room is perfect for friends or companions traveling together. Soft lighting, handcrafted vintage furniture, and a soothing ambiance create a warm and restful environment while preserving the authentic character of this historic town.`,
       image: 'assets/images/twin-room.png',
       bedrooms: 2,
-      area: '21 sq. m',
+      area: '24 sq. m',
       price: 5000,
       occupancy: 2
     },

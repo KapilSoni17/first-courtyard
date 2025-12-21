@@ -35,7 +35,7 @@ rooms: Room[] = [
       description: `Spacious, elegant, and thoughtfully designed, the Family Courtyard Suite is perfect for families or small groups. With two comfortable double beds and ample space to relax, the room combines modern comfort with traditional vintage furniture sourced from the region. Its warm interiors and refined details make it feel like a home rooted in heritage`,
       bedrooms: 2,
       area: '64 sq. m',
-      price: 8000,
+      price: 7000,
       occupancy: 4
     }
   ];
