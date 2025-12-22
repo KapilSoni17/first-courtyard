@@ -86,9 +86,11 @@ The property reflects timeless heritage charm through its traditional architectu
     if (this.isDesktop && !wasDesktop) {
       this.showFullAboutText = true;
       this.showFullPaawanaText = true;
+      this.showFullMandawaKothiText = true;
     } else if (!this.isDesktop && wasDesktop) {
       this.showFullAboutText = false;
       this.showFullPaawanaText = false;
+      this.showFullMandawaKothiText = false;
     }
   }
 
