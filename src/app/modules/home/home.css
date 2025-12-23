@@ -822,6 +822,9 @@ section {
   /* Heritage */
   .heritage-split-second {
     padding: 60px 24px;
+     display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   .full-image {
