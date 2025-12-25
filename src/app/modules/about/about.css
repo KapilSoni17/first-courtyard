@@ -19,15 +19,8 @@
 }
 
 .about-hero_content h1 {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
+  font-family: 'Madelyn' !important;
   padding: 32px 48px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.about-hero_content h1,
-.about-hero_content a {
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .about_hero_bg {
@@ -241,7 +234,19 @@
 
 }
 
+.book-room-btn {
+  padding: 12px 33px;
+  color: #fff !important;
+  letter-spacing: 0;
+  font-size: 18px;
+  border: 1px solid #333 !important;
+  cursor: pointer;
+  background: #333;
+  border-color: #333;
+  transition: all 0.3s ease;
+}
 
-
-
-
+.book-room-btn:hover {
+  color: #2e2e2e !important;
+  background-color: #f5f5f5 !important;
+}

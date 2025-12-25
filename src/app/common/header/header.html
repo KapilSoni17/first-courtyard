@@ -1,7 +1,7 @@
 <header class="home-header" [class.scrolled]="isScrolled">
     <nav class="nav-links">
       <a (click)="routeTo('home')">Home</a>
-      <!-- <a (click)="routeTo('about-us')">About</a> -->
+      <a (click)="routeTo('about-us')">About</a>
       <a (click)="routeTo('rooms')">Rooms</a>
       <a (click)="routeTo('contact')">Contact</a>
     </nav>
@@ -40,7 +40,7 @@
 <div class="mobile-menu" [class.open]="isMenuOpen">
   <button class="mobile-menu-close" (click)="isMenuOpen = false" aria-label="Close Menu">&times;</button>
     <a (click)="isMenuOpen = false; routeTo('home')">Home</a>
-    <!-- <a (click)="isMenuOpen = false; routeTo('about-us')">About</a> -->
+    <a (click)="isMenuOpen = false; routeTo('about-us')">About</a>
     <a (click)="isMenuOpen = false; routeTo('rooms')">Rooms</a>
     <a (click)="isMenuOpen = false; routeTo('contact')">Contact</a>
 </div>
