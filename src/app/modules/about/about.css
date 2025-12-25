@@ -1,6 +1,6 @@
 
 .about_hero {
-  height: 500px;
+  height: 50vh;
   position: relative;
   overflow: hidden;
 }
@@ -58,7 +58,6 @@
 
 .about_heritage_content h2 {
   font-size: 32px;
-  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -88,23 +87,31 @@
 }
 
 .room-card {
-  border: 1px solid #6D6B6D;
+  border: 0px solid #6D6B6D;
   padding: 25px;
   text-align: left;
   width: 360px;
-  font-family: "MarkOT";
-  line-height: 1;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 5px;
 }
 
 .section-text {
   line-height: 25px;
-  color: #7c7c7c;
+  color: #333;
   font-size: 14px;
   margin-bottom: 24px;
 }
 
+.shadow-wrapper {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  transition: box-shadow 0.3s ease !important;
+}
+
 .room-card img {
-  width: 100%;
+  width: 312px;
   height: 224px;
   object-fit: cover;
   margin-bottom: 16px;
