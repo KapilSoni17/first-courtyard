@@ -1,6 +1,6 @@
 
 .about_hero {
-  height: 50vh;
+  height: 500px;
   position: relative;
   overflow: hidden;
 }
@@ -19,7 +19,7 @@
 }
 
 .about-hero_content h1 {
-  font-family: 'Madelyn' !important;
+  /* font-fartant; */
   padding: 32px 48px;
 }
 
@@ -92,6 +92,15 @@
   padding: 25px;
   text-align: left;
   width: 360px;
+  font-family: "MarkOT";
+  line-height: 1;
+}
+
+.section-text {
+  line-height: 25px;
+  color: #7c7c7c;
+  font-size: 14px;
+  margin-bottom: 24px;
 }
 
 .room-card img {
@@ -143,6 +152,11 @@
   font-size: 14px;
 }
 
+.price span{
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .price small {
   font-size: 12px;
   color: var(--muted);
@@ -160,6 +174,16 @@
 
 /* Tablet - 1024px */
 @media (max-width: 1024px) {
+
+  .about_heritage_container{
+    display: flex;
+    flex-direction: column-reverse;  
+    gap: 20px;
+  }
+
+  .about_heritage {
+  padding: 25px 10%;
+}
 
   /* Rooms */
   .rooms {
@@ -186,6 +210,15 @@
 @media (max-width: 768px) {
   
 
+  .about_heritage_container{
+    display: flex;
+    flex-direction: column-reverse;  
+    gap: 20px;
+  }
+
+  .about_heritage {
+  padding: 50px 10%;
+}
   /* Rooms */
   .rooms {
     padding: 60px 24px;
@@ -212,6 +245,16 @@
 
 /* Small Mobile - 480px */
 @media (max-width: 480px) {
+
+  .about_heritage_container{
+    display: flex;
+    flex-direction: column-reverse;  
+    gap: 20px;
+  }
+
+  .about_heritage {
+  padding: 50px 10%;
+}
 
 
   /* Rooms */
