@@ -1,5 +1,5 @@
 .about_hero {
-  height: clamp(280px, 60vh, 500px);
+  height: 60vh;
   position: relative;
   overflow: hidden;
 }
@@ -11,6 +11,12 @@
   width: 100%;
   max-width: 900px;
   padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+  .about_hero {
+      height: 240px;
+  }
 }
 
 
@@ -233,7 +239,7 @@
 .explore-info-right img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
   object-fit: cover;
 }
 
