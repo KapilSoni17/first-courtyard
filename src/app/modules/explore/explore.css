@@ -1,5 +1,5 @@
 .about_hero {
-  height: clamp(280px, 50vh, 500px);
+  height: clamp(280px, 60vh, 500px);
   position: relative;
   overflow: hidden;
 }
