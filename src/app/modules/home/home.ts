@@ -21,8 +21,8 @@ export class Home {
   private serviceEmblaApi?: EmblaCarouselType;
 
   public options = { loop: true };
-  public plugins = [Autoplay({ delay: 3000, stopOnInteraction: true })];
-  public servicePlugins = [Autoplay({ delay: 3000, stopOnInteraction: true })];
+  public plugins = [Autoplay({ delay: 8000, stopOnInteraction: true })];
+  public servicePlugins = [Autoplay({ delay: 6000, stopOnInteraction: true })];
 
   slides: string[] = [
     'assets/images/slider1.webp',
