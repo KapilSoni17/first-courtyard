@@ -20,30 +20,11 @@
 
     <div class="about_heritage_content">
       <h2>Where Heritage Lives,<br/>Culture Breathes, and Stories Unfold</h2>
-
-      <p>
-        Rooted in the timeless charm of Rajasthan, we curate authentic experiences that celebrate history, tradition, and local artistry. 
-        Our mission is to offer more than journeys we offer moments that connect you to the soul of the land.
-      </p>
-
-      <p>
-        From immersive heritage walks through ancient streets to candlelit
-        dinners under starlit skies, each moment is thoughtfully planned.
-        From immersive heritage walks through ancient streets to candlelit
-        dinners under starlit skies, each moment is thoughtfully planned.From immersive heritage walks through ancient streets to candlelit
-        dinners under starlit skies, each moment is thoughtfully planned.
-      </p>
-
-      <p>
-        From immersive heritage walks through ancient streets to candlelit
-        dinners under starlit skies, each moment is thoughtfully planned.
-        inners under starlit skies, each moment is thoughtfully planned.
-        
-      </p>
-
-      <p>
-        Step into a world where the past meets the present and every journey
-        becomes a story worth remembering.
+      <p class="section-text expandable-text" [style.text-align]="'justify'" [style.line-height]="'30px'">
+        {{ aboutText }}
+        @if (!isDesktop && !showFullAboutText) {
+        <span class="read-more-link" (click)="toggleAboutText()">Read More</span>
+        }
       </p>
     </div>
   </div>

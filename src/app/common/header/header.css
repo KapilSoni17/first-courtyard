@@ -77,7 +77,7 @@
 
 .mobile-header {
   all: unset;           /* RESET everything */
-  height: 64px;
+  height: 70px;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -91,7 +91,7 @@
 }
 
 .mobile-logo img {
-  width: 93px;
+  width: 112px;
 }
 
 .mobile-hamburger {
@@ -150,7 +150,7 @@
   }
 
   .logo img {
-    width: 125px;
+    width: 140px;
     height: auto;
   }
 }
@@ -223,8 +223,8 @@
   }
   .mobile-logo img {
     display: block !important;
-    width: 93px;
-    height: 48px;
+    width: 122px;
+    height: 60px;
   }
 }
 

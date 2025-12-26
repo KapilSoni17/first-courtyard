@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
 })
 
 export class Explore {
-    // No specific logic or properties defined yet
+  cities = [
+    { name: 'Ramgarh', image: 'assets/images/cultural-eveing.jpg' },
+    { name: 'Nawalgarh', image: 'assets/images/cultural-eveing.jpg' },
+    { name: 'Fatehpur', image: 'assets/images/cultural-eveing.jpg' },
+    { name: 'Mahensar', image: 'assets/images/cultural-eveing.jpg' },
+    { name: 'Churu', image: 'assets/images/cultural-eveing.jpg' },
+    { name: 'Mukungarh', image: 'assets/images/cultural-eveing.jpg' }
+  ];
 }

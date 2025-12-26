@@ -52,6 +52,7 @@
 }
 
 .about_heritage_image img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
   width: 100%;
   border-radius: 2px;
 }
@@ -90,7 +91,7 @@
   border: 0px solid #6D6B6D;
   padding: 25px;
   text-align: left;
-  width: 360px;
+  width: 360px !important;
 }
 
 .section-title {
@@ -111,7 +112,7 @@
 }
 
 .room-card img {
-  width: 312px;
+  width: 360px;
   height: 224px;
   object-fit: cover;
   margin-bottom: 16px;

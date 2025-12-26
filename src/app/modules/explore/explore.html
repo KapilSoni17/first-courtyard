@@ -18,9 +18,14 @@
       <img src="assets/images/cultural-eveing.jpg" alt="Cultural Evening" />
     </div>
     <div class="explore-info-left">
-      <h3 class="explore-info-title">A Journey Through Time</h3>
+      <h3 class="explore-info-title">Let's take pleasure in Mandawa's unique Holi celebrations.</h3>
       <p class="explore-info-description">
-        Explore the ancient havelis, vibrant markets, and timeless traditions that make this region unique. Our curated tours and experiences bring history to life.
+        India, known for its rich culture and tradition takes you to the village of Mandawa in which Holi is celebrated 
+        with great joy at several courtyards and grounds where young men dances on the tune of musicians and drummers, 
+        with many of them dressed in women's outfit, children and women playing around with coloursand having festival 
+        delicacies and what not. Time has changed the way we are doing things than the way they were actually done, but not in 
+        Mandawa. The whole celebration of Holi will take you deep into the earliest culture and traditions of the Incredible real 
+        India. You can have a lifetime experience of Holi in Mandawa and take a dip in the colours of love and happiness with us.
       </p>
     </div>
     
@@ -29,9 +34,42 @@
   <div class="explore-info-content-second">
     
     <div class="explore-info-left">
-      <h3 class="explore-info-title">A Journey Through Time</h3>
+      <h3 class="explore-info-title">The Festival of Lights - Diwali</h3>
       <p class="explore-info-description">
-        Explore the ancient havelis, vibrant markets, and timeless traditions that make this region unique. Our curated tours and experiences bring history to life.
+        Diwali Join us in celebrating Diwali, the most significant festival in India, symbolizing the triumph of good over evil. 
+        Commemorating the return of King Raam and Queen Seeta, we honor their victory with traditional pooja ceremonies and 
+        rejoice as the entire country illuminates with sparkling fireworks, spreading joy and positivity throughout.
+      </p>
+    </div>
+    
+    <div class="explore-info-right">
+      <img src="assets/images/cultural-eveing.jpg" alt="Cultural Evening" />
+    </div>
+  </div>
+
+   <div class="explore-info-content">
+    <div class="explore-info-right">
+      <img src="assets/images/cultural-eveing.jpg" alt="Cultural Evening" />
+    </div>
+    <div class="explore-info-left">
+      <h3 class="explore-info-title">Gangaur Festival</h3>
+      <p class="explore-info-description">
+       Experience the joy of Both married and unmarried women coming together to celebrate the worlds first love 
+       marriage of Lord Shiva and Goddess Parvati who won Shiva's affection and love with her deep devotion and meditation. 
+       And after that, Parvati Visited her paternal home during gangaur to bless her friends with marital bliss.
+      </p>
+    </div>
+    
+  </div>
+
+  <div class="explore-info-content-second">
+    
+    <div class="explore-info-left">
+      <h3 class="explore-info-title">Kite Festival</h3>
+      <p class="explore-info-description">
+      Join us in celebrating the vibrant Kite Flying festival as we spend the day on the rooftop, 
+      relishing delicious pakoras, dancing to Bollywood beats,
+       and engaging in exhilarating kite battles, creating a memorable and joyous experience together.
       </p>
     </div>
     
@@ -45,21 +83,18 @@
   <h2 class="explore-cities-header">Explore Nearby Cities</h2>
   <p class="explore-cities-subheader">Discover the charm and culture of these beautiful cities.</p>
 
-  <ul class="explore-cities-list">
-    <li>Ramgarh</li>
-    <li>Nawalgarh</li>
-    <li>Fatehpur</li>
-  </ul>
+<ul class="explore-cities-list">
+  @for(city of cities; track city; let i = $index;){
+    <li>{{ city.name }}</li>
+  }
+</ul>
 
-  <div class="explore-cities-grid">
-    <div class="city-image"><img src="assets/images/cultural-eveing.jpg" alt="City 1" /></div>
-    <div class="city-image"><img src="assets/images/cultural-eveing.jpg" alt="City 3" /></div>
-    <div class="city-image"><img src="assets/images/cultural-eveing.jpg" alt="City 4" /></div>
-    <div class="city-image"><img src="assets/images/cultural-eveing.jpg" alt="City 5" /></div>
-    <div class="city-image"><img src="assets/images/cultural-eveing.jpg" alt="City 6" /></div>
-    <div class="city-image"><img src="assets/images/cultural-eveing.jpg" alt="City 7" /></div>
-    <div class="city-image"><img src="assets/images/cultural-eveing.jpg" alt="City 8" /></div>
-    <div class="city-image"><img src="assets/images/cultural-eveing.jpg" alt="City 9" /></div>
-    <div class="city-image"><img src="assets/images/cultural-eveing.jpg" alt="City 9" /></div>
+<div class="explore-cities-grid">
+   @for(city of cities; track city; let i = $index;){
+  <div class="city-image">
+     <img [src]="city.image" [alt]="city.name" />
   </div>
+}
+</div>
+
 </section>

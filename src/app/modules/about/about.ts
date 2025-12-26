@@ -36,6 +36,25 @@ export class About {
       occupancy: 4
     }
   ];
+
+  public isDesktop: boolean = window.innerWidth > 1024;
+  public showFullAboutText: boolean = this.isDesktop;
+
+  public toggleAboutText(): void {
+    this.showFullAboutText = true;
+  }
+
+  // Get current text based on state
+  public get aboutText(): string {
+    return this.showFullAboutText ? this.aboutFullText : this.aboutShortText;
+  }
+
+  public aboutFullText = `First Courtyard is a blend of heritage modern design hotel in Mandawa, Rajasthan, offering a comfortable and authentic stay in the heart of the historic town. Built around a traditional courtyard, the hotel beautifully blends heritage architecture with modern comfort. The rooms are clean, spacious, and thoughtfully designed, featuring handcrafted vintage furniture from the Shekhawati region that reflects the cultural richness of Mandawa. Ideal for couples, families, and cultural travellers, the hotel provides a peaceful atmosphere with personalised hospitality.
+
+Located in the main area of Mandawa, Hotel First Courtyard is close to major attractions such as Mandawa Fort, heritage havelis, local markets, and cultural landmarks. Guests can easily explore the town on foot while enjoying a quiet retreat within the hotel’s serene courtyard. Whether you are visiting Mandawa for heritage tourism, a relaxing getaway, or an authentic Rajasthani experience, Hotel First Courtyard offers one of the best heritage stays in Mandawa with warmth, comfort, and timeless charm.`;
+
+  public aboutShortText = `First Courtyard is a blend of heritage modern design hotel in Mandawa, Rajasthan, offering a comfortable and authentic stay in the heart of the historic town. Built around a traditional courtyard, the hotel beautifully blends heritage architecture with modern...`;
+
 }
 
 export interface Room {

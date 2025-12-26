@@ -40,6 +40,10 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" [class.open]="isMenuOpen">
   <button class="mobile-menu-close" (click)="isMenuOpen = false" aria-label="Close Menu">&times;</button>
+      <div class="logo">
+      <img (click)="isMenuOpen = false; routeTo('home')" src="assets/images/black-new-logo.png"
+        alt="First Courtyard" />
+    </div>
     <a (click)="isMenuOpen = false; routeTo('home')">Home</a>
     <a (click)="isMenuOpen = false; routeTo('about-us')">About</a>
     <a (click)="isMenuOpen = false; routeTo('rooms')">Rooms</a>
