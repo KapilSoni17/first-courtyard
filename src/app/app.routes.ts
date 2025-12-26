@@ -5,13 +5,15 @@ import { Contact } from './modules/contact/contact';
 import { About } from './modules/about/about';
 import { TermsConditions } from './modules/terms-conditions/terms-conditions';
 import { PrivacyPolicy } from './modules/privacy-policy/privacy-policy';
+import { Explore } from './modules/explore/explore';
 
 export const routes: Routes = [
     { path: '', component: Home },
     { path: 'about-us', component: About },
     { path: 'rooms', component: Rooms },
     { path: 'contact', component: Contact },
+    { path: 'explore', component: Explore },
     { path: 'first-courtyard-privacy-policy', component: PrivacyPolicy },
     { path: 'terms-conditions', component: TermsConditions },
-    { path: '**', redirectTo: '' }  
+    { path: '**', redirectTo: '' }
 ];
