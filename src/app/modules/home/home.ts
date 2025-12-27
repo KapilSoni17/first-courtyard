@@ -5,6 +5,7 @@ import {
   EmblaCarouselType
 } from 'embla-carousel-angular';
 import Autoplay from 'embla-carousel-autoplay';
+import { BookRoomService } from '../../common/service/book-room';
 
 @Component({
   selector: 'app-home',
@@ -29,6 +30,7 @@ export class Home {
     'assets/images/slider2.webp',
     'assets/images/slider3.webp'
   ];
+  private bookRoomService = inject(BookRoomService);
 
   // Text expansion states
   public isDesktop: boolean = window.innerWidth > 1024;
@@ -112,12 +114,6 @@ The property reflects timeless heritage charm through its traditional architectu
         'Experience vibrant folk performances under the open sky, where rhythm, tradition, and celebration come together in an unforgettable evening.',
       image: 'assets/images/night-folk-dance.jpg'
     },
-    // {
-    //   title: 'Cultural Evenings',
-    //   description:
-    //     'Embark on a serene camel safari across golden sands, offering breathtaking views and a glimpse into the timeless desert lifestyle.',
-    //   image: 'assets/images/cultural-eveing.jpg'
-    // },
     {
       title: 'Sightseeing Tours',
       description:
@@ -212,6 +208,10 @@ The property reflects timeless heritage charm through its traditional architectu
 
   public get mandawaKothiText(): string {
     return this.showFullMandawaKothiText ? this.mandawaKothiFullDesc : this.mandawaKothiShortDesc;
+  }
+
+  public navigateToSpider():void {
+    this.bookRoomService.navigateToSpider();
   }
 }
 

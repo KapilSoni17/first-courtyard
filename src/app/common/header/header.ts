@@ -1,6 +1,7 @@
 import { Component, HostListener, inject } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter } from 'rxjs';
+import { BookRoomService } from '../service/book-room';
 
 @Component({
   selector: 'app-header',
@@ -19,8 +20,13 @@ export class Header {
   }
 
   private router = inject(Router);
+  private bookRoomService = inject(BookRoomService);
 
   public routeTo(route: string): void {
     this.router.navigate([route]);
+  }
+
+  public navigateToSpider():void {
+      this.bookRoomService.navigateToSpider();
   }
 }

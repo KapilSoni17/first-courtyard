@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { BookRoomService } from '../../common/service/book-room';
 
 @Component({
   selector: 'app-about',
@@ -55,6 +56,11 @@ Located in the main area of Mandawa, Hotel First Courtyard is close to major att
 
   public aboutShortText = `First Courtyard is a blend of heritage modern design hotel in Mandawa, Rajasthan, offering a comfortable and authentic stay in the heart of the historic town. Built around a traditional courtyard, the hotel beautifully blends heritage architecture with modern...`;
 
+  private bookRoomService = inject(BookRoomService);
+
+  public navigateToSpider():void {
+    this.bookRoomService.navigateToSpider();
+  }
 }
 
 export interface Room {

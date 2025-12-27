@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { BookRoomService } from '../../common/service/book-room';
 
 @Component({
   selector: 'app-rooms',
@@ -40,8 +41,10 @@ rooms: Room[] = [
     }
   ];
 
-  onBook(roomId: number): void {
-    console.log('Booking room:', roomId);
+  private bookRoomService = inject(BookRoomService);
+  
+  public navigateToSpider():void {
+    this.bookRoomService.navigateToSpider();
   }
 }
 
