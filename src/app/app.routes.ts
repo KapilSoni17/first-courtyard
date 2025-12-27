@@ -1,19 +1,43 @@
 import { Routes } from '@angular/router';
-import { Home } from './modules/home/home';
-import { Rooms } from './modules/rooms/rooms';
-import { Contact } from './modules/contact/contact';
-import { About } from './modules/about/about';
-import { TermsConditions } from './modules/terms-conditions/terms-conditions';
-import { PrivacyPolicy } from './modules/privacy-policy/privacy-policy';
-import { Explore } from './modules/explore/explore';
 
 export const routes: Routes = [
-    { path: '', component: Home },
-    { path: 'about-us', component: About },
-    { path: 'rooms', component: Rooms },
-    { path: 'contact', component: Contact },
-    { path: 'explore', component: Explore },
-    { path: 'first-courtyard-privacy-policy', component: PrivacyPolicy },
-    { path: 'terms-conditions', component: TermsConditions },
-    { path: '**', redirectTo: '' }
+    {
+        path: '',
+        loadComponent: () =>
+            import('./modules/home/home').then(c => c.Home)
+    },
+    {
+        path: 'about-us',
+        loadComponent: () =>
+            import('./modules/about/about').then(c => c.About)
+    },
+    {
+        path: 'rooms',
+        loadComponent: () =>
+            import('./modules/rooms/rooms').then(c => c.Rooms)
+    },
+    {
+        path: 'contact',
+        loadComponent: () =>
+            import('./modules/contact/contact').then(c => c.Contact)
+    },
+    {
+        path: 'explore-mandawa',
+        loadComponent: () =>
+            import('./modules/explore/explore').then(c => c.Explore)
+    },
+    {
+        path: 'first-courtyard-privacy-policy',
+        loadComponent: () =>
+            import('./modules/privacy-policy/privacy-policy').then(c => c.PrivacyPolicy)
+    },
+    {
+        path: 'terms-conditions',
+        loadComponent: () =>
+            import('./modules/terms-conditions/terms-conditions').then(c => c.TermsConditions)
+    },
+    {
+        path: '**',
+        redirectTo: ''
+    }
 ];

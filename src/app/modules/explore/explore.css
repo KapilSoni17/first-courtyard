@@ -17,6 +17,9 @@
   .about_hero {
       height: 240px;
   }
+    .explore-cities-section {
+  padding: 32px 10%;
+}
 }
 
 
@@ -122,6 +125,9 @@
   .explore-info-section {
     padding: 40px 4%;
   }
+    .explore-cities-section {
+  padding: 22px 10%;
+}
 
   .explore-info-heading {
     font-size: 24px;
@@ -175,10 +181,15 @@
   .explore-info-heading {
     font-size: 22px;
   }
+  .explore-cities-section {
+  padding: 22px 10%;
+}
 
   .explore-info-section{
     display: grid;
+    padding: 22px 6%;
   }
+
   .explore-info-subheading {
     font-size: 14px;
   }
